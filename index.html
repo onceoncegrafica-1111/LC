@@ -3,35 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>CRISTEL EXTENSIONS | Link Oficial</title>
-    <meta name="description" content="Hair Studio en Belgrano. Especialistas en colocación rusa de nanocápsulas invisibles y cabello 100% eslavo virgen.">
-    
-    <!-- Tipografía Editorial Cerini (Montserrat en pesos contrastados) -->
+    <title>Lorena Cabrera · Skin Care Studio | Encarnación, Paraguay</title>
+    <meta name="description" content="Alta cosmiatría, rejuvenecimiento facial y terapias cutáneas personalizadas en Encarnación, Paraguay. Más de 30 años de trayectoria médica y estética.">
+
+    <!-- PRELOAD PRIORITARIO DE LA IMAGEN DE FONDO DE GITHUB -->
+    <link rel="preload" as="image" href="./B.%20Lorena%20Cabrera%20Skin%20Care%20Studio%20-%20Tarjetas%20-%20B2B%20Image%20to%20Image%20Ultra%20(VII).jpg">
+
+    <!-- TIPOGRAFÍAS NOBLES: CORMORANT GARAMOND + PLUS JAKARTA SANS + SPACE GROTESK + CINZEL -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* =========================================================
-           SISTEMA CROMÁTICO: NOIR CERINI & ORO LÍQUIDO 24K
-           ========================================================= */
+        /* ==========================================================================
+           1. SISTEMA CROMÁTICO: ORO CHAMPÁN, BRONCE ESPRESSO, NUDE & PORCELANA
+           ========================================================================== */
         :root {
-            --bg-black: #000000;
-            --pure-white: #FFFFFF;
+            --color-canvas-bg: #F4EDE0;
             
-            /* Metales y Acentos de Color */
-            --oro-aurora: #FDF0A0;
-            --oro-principal: #CD872A;
-            --oro-profundo: #9B5C1B;
-            --oro-glow: rgba(205, 135, 42, 0.35);
-            --oro-texto: #E5B76C;
+            /* Metálicos & Oro */
+            --gold-primary: #D5B465;
+            --gold-burnished: #9E7D33;
+            --gold-deep: #7D6021;
+            --gold-soft-glow: rgba(213, 180, 101, 0.35);
+            --gold-hairline: rgba(213, 180, 101, 0.42);
+
+            /* Contraste & Carácter */
+            --color-espresso-dark: #271E18;
+            --color-espresso-card: #2F241E;
+            --color-terracotta-rich: #8F4C36;
+            --color-nude-velvet: #F4ECE1;
             
-            /* Líneas y Superficies */
-            --border-hairline: rgba(255, 255, 255, 0.18);
-            --border-hairline-hover: rgba(255, 255, 255, 0.6);
-            --gray-subtle: #8A8A8A;
-            --font-editorial: 'Montserrat', -apple-system, sans-serif;
-            --ease-cerini: cubic-bezier(0.16, 1, 0.3, 1);
+            /* Textos */
+            --text-title-dark: #1F1813;
+            --text-body-warm: #4F433B;
+            --text-muted-taupe: #88796F;
+            --text-light-pure: #FAF7F2;
+
+            /* Tipografías */
+            --font-editorial: 'Cormorant Garamond', Georgia, serif;
+            --font-monument: 'Cinzel', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            --font-mono: 'Space Grotesk', monospace;
+
+            /* Sombras & Elevaciones */
+            --shadow-float-card: 0 16px 36px -10px rgba(45, 30, 20, 0.12), 0 3px 10px rgba(0, 0, 0, 0.04);
+            --shadow-hover-card: 0 22px 48px -8px rgba(158, 125, 51, 0.28), 0 6px 16px rgba(0, 0, 0, 0.06);
+            --shadow-espresso: 0 18px 44px rgba(39, 30, 24, 0.32);
         }
 
         * {
@@ -42,615 +60,1305 @@
         }
 
         html {
-            background-color: var(--bg-black);
+            background-color: var(--color-canvas-bg);
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-black);
-            color: var(--pure-white);
-            font-family: var(--font-editorial);
+            font-family: var(--font-sans);
+            color: var(--text-body-warm);
             min-height: 100vh;
             min-height: 100dvh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            padding: 0 16px 70px;
             overflow-x: hidden;
-            padding: calc(env(safe-area-inset-top, 20px) + 24px) 16px calc(env(safe-area-inset-bottom, 20px) + 28px);
-            -webkit-font-smoothing: antialiased;
             position: relative;
+            background-color: var(--color-canvas-bg);
         }
 
-        /* Halo dorado atmosférico superior (elimina el fondo plano) */
-        body::before {
-            content: '';
+        /* ==========================================================================
+           2. FONDO: FOTO + TRAMA DE ALGODÓN SOFT + PATRÓN LC 3D ASIMÉTRICO EN DERIVA
+           ========================================================================== */
+        .ambient-skin-stage {
             position: fixed;
-            top: -8%;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-color: #F4EDE0;
+            background-image: 
+                /* 1. Monograma LC Asimétrico (Quincunx 140x180) con relieve 3D volumétrico y mayor presencia */
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='180' viewBox='0 0 140 180'%3E%3Cdefs%3E%3Cfilter id='relief' x='-25%25' y='-25%25' width='160%25' height='160%25'%3E%3CfeDropShadow dx='-1.2' dy='-1.2' stdDeviation='0.8' flood-color='%23FFFFFF' flood-opacity='0.9'/%3E%3CfeDropShadow dx='1.8' dy='2.4' stdDeviation='1.4' flood-color='%235A4222' flood-opacity='0.45'/%3E%3C/filter%3E%3Cg id='lc'%3E%3Cpath fill='%23C9A654' filter='url(%23relief)' d='M38.62,46.03c-1.24,1.43-2.72,2.55-4.51,3.24-2.94,1.13-5.37.14-6.33-2.6-.51-1.46-.69-2.97-.62-4.52.25-5.17,2.27-9.64,5.45-13.63,1.15-1.45,2.47-2.74,4.23-3.48,2.48-1.05,4.44.1,4.4,2.7-.04,2.35-.95,4.37-2.92,5.79-.27.19-.58.38-.42.74.13.3.47.26.77.23.64-.06,1.15-.38,1.6-.78,1.68-1.5,2.55-3.41,2.59-5.64.05-2.77-1.69-4.59-4.17-4.44-1.84.11-3.59.61-5.09,1.7-5.16,3.74-8.03,8.91-9.21,15.09-.33,1.76-.42,3.55-.07,5.33.87,4.46,4.6,6.54,8.9,5.05,3.09-1.07,5.47-3,7.32-5.65.13-.19.54-.71.59-1.1.05-.45-.54-.67-.79-.29-.52.78-1.09,1.53-1.71,2.25'/%3E%3Cpath fill='%239E7D33' filter='url(%23relief)' d='M9.71,29.56c2.6.34,5.25.17,7.76-.49,1.26-.32,2.48-.78,3.65-1.34.59-.28,1.15-.59,1.73-.92.57-.32,1.13-.66,1.68-1.02,1.09-.71,2.11-1.5,3-2.39.42-.46.84-.92,1.16-1.44.18-.25.3-.52.45-.78.07-.13.11-.27.17-.4.06-.14.12-.27.15-.41l.12-.42c.03-.14.05-.28.07-.42.06-.29.06-.53.04-.79-.04-.51-.23-1.02-.51-1.39-.28-.37-.64-.58-1.08-.64-.43-.06-.94.04-1.42.27-.24.11-.48.25-.69.41-.2.15-.45.39-.68.59-.47.42-.9.89-1.32,1.36-.84.96-1.59,2.02-2.29,3.12-1.39,2.21-2.58,4.59-3.86,6.97-.65,1.2-1.28,2.35-1.9,3.53-.62,1.18-1.21,2.37-1.78,3.56-1.09,2.38-2.29,5.04-4.4,7.11-.53.52-1.12.97-1.76,1.38-.16.1-.33.18-.5.27l-.25.14-.26.11-.52.22-.54.18-.27.08-.28.06-.55.12c-.43.07-.86.08-1.28.04-.42-.04-.83-.13-1.25-.29-.41-.16-.83-.39-1.19-.75-.36-.35-.65-.85-.76-1.36-.01-.06-.03-.13-.04-.19l-.02-.19c0-.13-.02-.25-.01-.39.02-.28.07-.53.15-.76.16-.46.37-.81.58-1.11l.32-.47c.12-.15.24-.29.36-.44l.18-.22.2-.2c.14-.13.27-.27.41-.4.3-.23.58-.49.91-.69.63-.43,1.32-.75,2.03-1l.54-.17c.18-.04.37-.08.55-.12.09-.02.18-.04.28-.06l.28-.03c.19-.02.37-.05.56-.06.75-.04,1.5,0,2.24.13.73.15,1.46.35,2.14.68.36.15.63.31.95.47.31.16.61.34.92.52.61.37,1.21.79,1.76,1.27.27.24.54.5.78.75.24.25.48.51.71.77.93,1.04,1.74,2.13,2.55,3.21.8,1.08,1.59,2.14,2.43,3.14.84.99,1.74,1.92,2.74,2.7,1,.78,2.11,1.42,3.28,1.86,1.17.43,2.41.64,3.64.56,1.23-.08,2.46-.45,3.6-1,1.14-.55,2.2-1.31,3.19-2.15,1.97-1.71,3.62-3.8,5.17-5.97.15-.2.43-.25.63-.11.2.14.25.42.11.62-1.48,2.25-3.09,4.47-5.13,6.34-1.02.93-2.14,1.78-3.39,2.43-1.25.65-2.63,1.11-4.07,1.25-1.45.14-2.92-.06-4.27-.54-1.36-.47-2.6-1.18-3.73-2.02-1.13-.85-2.12-1.85-3.03-2.88-.91-1.04-1.73-2.12-2.55-3.18-.82-1.06-1.63-2.1-2.51-3.05-.22-.24-.44-.47-.67-.7-.23-.23-.45-.43-.68-.63-.47-.4-.97-.74-1.52-1.06-.27-.16-.55-.31-.84-.45-.28-.14-.6-.31-.86-.41-.54-.26-1.11-.4-1.69-.52-.58-.1-1.18-.12-1.76-.08-.15,0-.29.04-.44.05l-.22.03c-.07.01-.14.03-.22.05l-.43.1-.42.13c-.55.2-1.09.44-1.56.78-.25.15-.46.35-.69.53l-.31.31-.15.15-.14.17-.28.34-.24.36c-.17.24-.29.49-.36.66-.03.09-.04.16-.04.22,0,.02,0,.07,0,.11v.06s.01.03.02.05c.03.14.09.25.21.36.23.24.72.42,1.21.47.25.02.5.02.73-.02l.43-.1.21-.05.21-.07.42-.13.4-.17.2-.09.19-.11.38-.21c.49-.32.97-.68,1.4-1.1.43-.43.84-.89,1.2-1.39.37-.5.71-1.04,1.02-1.59.32-.55.61-1.13.89-1.72l.84-1.82c1.15-2.45,2.45-4.85,3.74-7.18,1.27-2.34,2.47-4.77,3.98-7.08.75-1.15,1.57-2.28,2.51-3.33.47-.52.96-1.03,1.49-1.5.28-.24.51-.46.85-.71.32-.23.67-.44,1.04-.6.73-.33,1.59-.53,2.49-.38.45.07.89.23,1.28.48.39.24.72.57.98.92.52.71.77,1.53.83,2.35.03.4,0,.85-.08,1.21-.04.19-.06.38-.11.56l-.17.55c-.05.19-.13.36-.21.53-.08.17-.14.35-.23.51-.18.32-.36.66-.58.95-.41.62-.9,1.15-1.41,1.66-1.03.99-2.17,1.81-3.34,2.53-1.19.72-2.37,1.35-3.65,1.91-1.27.55-2.59.98-3.94,1.28-1.35.29-2.72.47-4.1.5-1.38.03-2.76-.09-4.11-.34-.25-.05-.41-.28-.36-.53.04-.24.27-.4.51-.37h0Z'/%3E%3C/g%3E%3C/defs%3E%3C!-- 1. Esquinas (0,0), (140,0), (0,180), (140,180) --%3E%3Cuse href='%23lc' transform='translate(-15,-15) scale(0.68)'/%3E%3Cuse href='%23lc' transform='translate(125,-15) scale(0.68)'/%3E%3Cuse href='%23lc' transform='translate(-15,165) scale(0.68)'/%3E%3Cuse href='%23lc' transform='translate(125,165) scale(0.68)'/%3E%3C!-- 2. Centro escalonado asimétrico (70, 90) --%3E%3Cuse href='%23lc' transform='translate(55,75) scale(0.68)'/%3E%3C/svg%3E"),
+                /* 2. Micro-textura noble de algodón peinado / piqué suave estilo Hermès */
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.08) 1px, transparent 1px, transparent 4px),
+                repeating-linear-gradient(-45deg, rgba(65, 45, 25, 0.02) 0px, rgba(65, 45, 25, 0.02) 1px, transparent 1px, transparent 4px),
+                /* 3. Gradiente seda luminosa con halo central */
+                radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.86) 0%, rgba(245, 239, 227, 0.42) 55%, rgba(226, 212, 190, 0.90) 100%),
+                /* 4. Fotografía oficial cargada desde el repositorio de GitHub */
+                url("./B.%20Lorena%20Cabrera%20Skin%20Care%20Studio%20-%20Tarjetas%20-%20B2B%20Image%20to%20Image%20Ultra%20(VII).jpg");
+            background-size: 140px 180px, 4px 4px, 4px 4px, cover, cover;
+            background-repeat: repeat, repeat, repeat, no-repeat, no-repeat;
+            background-position: 0 0, 0 0, 0 0, center center, center top;
+            /* Animación continua y sutil hacia la derecha (múltiplo exacto de 140px = 560px) */
+            animation: smoothPatternDrift 38s linear infinite;
+        }
+
+        @keyframes smoothPatternDrift {
+            0% {
+                background-position: 0px 0, 0 0, 0 0, center center, center top;
+            }
+            100% {
+                background-position: 560px 0, 0 0, 0 0, center center, center top;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .ambient-skin-stage {
+                background-position: 0 0, 0 0, 0 0, center center, center 20%;
+                background-attachment: scroll, scroll, scroll, fixed, fixed;
+            }
+        }
+
+        /* Micro-halo dorado superior */
+        .ambient-skin-stage::after {
+            content: '';
+            position: absolute;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 580px;
-            height: 440px;
-            background: radial-gradient(circle, rgba(205, 135, 42, 0.14) 0%, rgba(0, 0, 0, 0) 70%);
-            pointer-events: none;
-            z-index: 0;
+            width: 100vw;
+            max-width: 600px;
+            height: 220px;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.95) 0%, rgba(245, 238, 222, 0.2) 60%, transparent 100%);
         }
 
-        /* =========================================================
-           CONTENEDOR VERTICAL LINKTREE (RESPONSIVE PC & MOBILE)
-           ========================================================= */
-        .bio-canvas {
+        /* ==========================================================================
+           3. SHELL PRINCIPAL MOBILE FIRST
+           ========================================================================== */
+        .studio-hub-shell {
             width: 100%;
-            max-width: 440px;
+            max-width: 485px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 22px;
-            margin: 0 auto;
+            gap: 20px;
+            z-index: 10;
             position: relative;
-            z-index: 1;
+            padding-top: 26px;
         }
 
-        /* =========================================================
-           1. LOGO FIJO ARRIBA DE TODO AL CENTRO
-           ========================================================= */
-        .brand-header {
+        /* ==========================================================================
+           4. CABECERA: LOGO ORIGINAL SUELTO CON MÁXIMA JERARQUÍA (SIN MONEDA)
+           ========================================================================== */
+        .hero-identity-monument {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding-top: 6px;
+            padding: 0 6px 4px;
         }
 
-        .logo-box {
+        .brand-vector-stage {
             width: 100%;
-            max-width: 252px;
+            max-width: 330px;
+            height: 82px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            transition: transform 0.4s var(--ease-cerini);
-            position: relative;
+            justify-content: center;
+            cursor: pointer;
+            filter: drop-shadow(0 6px 14px rgba(125, 96, 33, 0.18));
+            animation: slowCoutureFloat 8s ease-in-out infinite alternate;
+            margin-bottom: 12px;
         }
 
-        .logo-box:hover {
-            transform: scale(1.02);
+        @keyframes slowCoutureFloat {
+            0% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-4px) scale(1.018); filter: drop-shadow(0 12px 24px rgba(158, 125, 51, 0.26)); }
+            100% { transform: translateY(0px) scale(1); }
         }
 
-        .logo-svg {
+        .svg-brand-raw {
             width: 100%;
             height: auto;
             display: block;
-            filter: drop-shadow(0 4px 22px rgba(205, 135, 42, 0.35));
         }
 
-        .studio-tagline {
-            font-size: 0.64rem;
+        .brand-motto-headline {
+            font-family: var(--font-editorial);
+            font-size: clamp(1.48rem, 5.2vw, 1.82rem);
             font-weight: 700;
-            letter-spacing: 0.34em;
-            text-transform: uppercase;
-            color: var(--oro-texto);
-            margin-top: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .studio-tagline::before,
-        .studio-tagline::after {
-            content: '';
-            width: 22px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--oro-principal));
-        }
-
-        .studio-tagline::after {
-            background: linear-gradient(90deg, var(--oro-principal), transparent);
-        }
-
-        .studio-quote {
-            font-size: 0.76rem;
-            font-weight: 400;
-            letter-spacing: 0.06em;
-            color: #CCCCCC;
-            line-height: 1.45;
-            margin-top: 8px;
-            max-width: 330px;
-        }
-
-        /* =========================================================
-           2. BANDA MARQUEE DISRUPTIVA (ESTILO RUNWAY CERINI)
-           ========================================================= */
-        .marquee-banner-cerini {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            margin-right: calc(-50vw + 50%);
-            border-top: 1px solid var(--border-hairline);
-            border-bottom: 1px solid var(--border-hairline);
-            padding: 9px 0;
-            overflow: hidden;
-            background: #050505;
-        }
-
-        .marquee-track {
-            display: flex;
-            white-space: nowrap;
-            overflow: hidden;
-            gap: 2rem;
-        }
-
-        .marquee-inner {
-            display: flex;
-            gap: 2rem;
-            animation: scrollTicker 24s linear infinite;
-            font-size: 0.68rem;
-            font-weight: 800;
-            letter-spacing: 0.26em;
-            text-transform: uppercase;
-            color: var(--pure-white);
-        }
-
-        .marquee-inner span {
-            display: inline-flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .marquee-inner span::after {
-            content: "•";
-            color: var(--oro-principal);
-            text-shadow: 0 0 6px var(--oro-principal);
-        }
-
-        @keyframes scrollTicker {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* =========================================================
-           3. DIRECTORIO DE ACCIONES CON BORDE DORADO LATERAL
-           ========================================================= */
-        .links-group {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        /* BOTONES DESTACADOS CERINI (CAJA BLANCA / TEXTO NEGRO BOLD) */
-        .btn-cerini-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: var(--pure-white);
-            color: var(--bg-black);
-            text-decoration: none;
-            padding: 18px 22px;
-            font-size: 0.88rem;
-            font-weight: 800;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-            border: 1px solid var(--pure-white);
-            position: relative;
-            transition: all 0.3s var(--ease-cerini);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Toque dorado lateral en el botón principal */
-        .btn-cerini-box.btn-gold-accent::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, var(--oro-aurora), var(--oro-principal), var(--oro-profundo));
-            box-shadow: 0 0 10px var(--oro-glow);
-        }
-
-        .btn-cerini-box:hover,
-        .btn-cerini-box:active {
-            background-color: var(--bg-black);
-            color: var(--pure-white);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(205, 135, 42, 0.2);
-        }
-
-        .btn-cerini-box svg {
-            width: 16px;
-            height: 16px;
-            stroke: currentColor;
-            stroke-width: 2.5;
-            fill: none;
-            transition: transform 0.3s ease;
-        }
-
-        .btn-cerini-box:hover svg {
-            transform: translateX(4px);
-        }
-
-        /* =========================================================
-           TARJETAS EDITORIALES CON BORDE DORADO LATERAL IZQUIERDO
-           ========================================================= */
-        .editorial-link-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(90deg, #0A0A0A 0%, #060606 100%);
-            border: 1px solid var(--border-hairline);
-            padding: 18px 20px 18px 22px;
-            text-decoration: none;
-            color: var(--pure-white);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s var(--ease-cerini);
-        }
-
-        /* BORDES DORADOS LATERALES IZQUIERDOS SOLICITADOS */
-        .editorial-link-card.gold-edge-left::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3.5px;
-            background: linear-gradient(180deg, var(--oro-aurora) 0%, var(--oro-principal) 55%, var(--oro-profundo) 100%);
-            box-shadow: 0 0 8px var(--oro-glow);
-        }
-
-        /* Borde blanco más sutil en tarjetas secundarias */
-        .editorial-link-card.white-edge-left::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2.5px;
-            background: var(--pure-white);
-            opacity: 0.65;
-        }
-
-        .editorial-link-card:hover {
-            border-color: var(--border-hairline-hover);
-            background: #101010;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.8), 0 0 16px rgba(205, 135, 42, 0.15);
-        }
-
-        .link-text-block {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        /* Tags en Oro Cálido para dar vida */
-        .link-category {
-            font-size: 0.58rem;
-            font-weight: 700;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--oro-texto);
-        }
-
-        .editorial-link-card.white-edge-left .link-category {
-            color: #A0A0A0;
-        }
-
-        .link-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--pure-white);
-            line-height: 1.25;
-            transition: color 0.3s ease;
-        }
-
-        .editorial-link-card:hover .link-title {
-            color: var(--oro-aurora);
-        }
-
-        .link-desc {
-            font-size: 0.68rem;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-            color: #A3A3A3;
-            margin-top: 2px;
-            line-height: 1.35;
-        }
-
-        .link-arrow svg {
-            width: 14px;
-            height: 14px;
-            stroke: var(--pure-white);
-            stroke-width: 2;
-            fill: none;
-            transition: transform 0.3s ease, stroke 0.3s ease;
-        }
-
-        .editorial-link-card:hover .link-arrow svg {
-            transform: translateX(4px);
-            stroke: var(--oro-aurora);
-        }
-
-        /* =========================================================
-           4. BARRA DE REDES RETICULAR (3 COLUMNAS CERINI)
-           ========================================================= */
-        .social-strip-cerini {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            border: 1px solid var(--border-hairline);
+            font-style: italic;
+            color: var(--color-espresso-dark);
+            line-height: 1.15;
+            letter-spacing: -0.01em;
             margin-top: 4px;
         }
 
-        .social-strip-item {
+        .brand-lead-caption {
+            font-family: var(--font-sans);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            color: var(--text-body-warm);
+            max-width: 92%;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .brand-lead-caption strong {
+            color: var(--color-terracotta-rich);
+            font-weight: 700;
+        }
+
+        .badges-capsule-row {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 10px;
-            text-decoration: none;
-            color: var(--pure-white);
-            font-size: 0.64rem;
-            font-weight: 700;
-            letter-spacing: 0.22em;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        .pill-badge-seal {
+            background: #FFFFFF;
+            border: 1.5px solid var(--gold-hairline);
+            border-radius: 999px;
+            padding: 5px 12px;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: var(--gold-deep);
+            box-shadow: 0 4px 12px rgba(45, 30, 20, 0.05);
+            letter-spacing: 0.04em;
             text-transform: uppercase;
-            border-right: 1px solid var(--border-hairline);
-            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .icon-sparkle-mini {
+            width: 11px;
+            height: 11px;
+            fill: var(--gold-primary);
+        }
+
+        /* ==========================================================================
+           5. HERO CARD: WHATSAPP CONVERSIÓN CON PULSO
+           ========================================================================== */
+        .card-whatsapp-portal {
+            background: #FFFFFF;
+            border: 2px solid #25D366;
+            border-radius: 28px 16px 28px 16px;
+            padding: 22px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--color-espresso-dark);
+            box-shadow: 0 14px 34px rgba(37, 211, 102, 0.22);
             position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .social-strip-item:last-child {
-            border-right: none;
+        .card-whatsapp-portal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+            transform: skewX(-22deg);
+            animation: delicateSheen 6.5s infinite ease-in-out;
         }
 
-        .social-strip-item:hover {
-            background-color: var(--pure-white);
-            color: var(--bg-black);
+        @keyframes delicateSheen {
+            0%, 50% { left: -120%; }
+            80%, 100% { left: 160%; }
         }
 
-        /* =========================================================
-           5. PIE DE PÁGINA: STUDIO BELGRANO Y CRÉDITOS
-           ========================================================= */
-        .bio-footer {
-            width: 100%;
+        .card-whatsapp-portal:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 20px 44px rgba(37, 211, 102, 0.32);
+        }
+
+        .hero-left-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .hero-live-beacon {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #179344;
+        }
+
+        .pulse-core {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #25D366;
+            box-shadow: 0 0 10px #25D366;
+            animation: pulseGlow 1.8s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%      { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .hero-action-title {
+            font-family: var(--font-editorial);
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--color-espresso-dark);
+        }
+
+        .hero-action-caption {
+            font-size: 0.82rem;
+            color: var(--text-muted-taupe);
+            font-weight: 600;
+        }
+
+        .whatsapp-bubble-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.40);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .card-whatsapp-portal:hover .whatsapp-bubble-btn {
+            transform: scale(1.12) rotate(12deg);
+        }
+
+        .whatsapp-bubble-btn svg {
+            width: 26px;
+            height: 26px;
+            fill: #FFFFFF;
+        }
+
+        /* ==========================================================================
+           6. GRILLA BENTO MORFOLÓGICA CON ALTO CONTRASTE Y DIVERSIDAD
+           ========================================================================== */
+        .morph-bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .bento-cell {
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 156px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
+        .bento-cell:hover {
+            transform: translateY(-5px);
+        }
+
+        /* CELDA 1: BRONCE OSCURO ESPRESSO (GLOW PROTOCOLS) */
+        .cell-espresso {
+            background: var(--color-espresso-card);
+            color: #FFFFFF;
+            border-radius: 40px 18px 18px 18px;
+            border: 1.5px solid var(--gold-burnished);
+            box-shadow: var(--shadow-espresso);
+        }
+
+        .cell-espresso .cell-tag { color: var(--gold-primary); }
+        .cell-espresso .cell-title { color: #FFFFFF; }
+        .cell-espresso .cell-desc { color: #D8CCC4; }
+        .cell-espresso .cell-arrow { color: var(--gold-primary); }
+
+        /* CELDA 2: ORO CHAMPÁN SEDOSO (MASTERCLASS GLOW 2.0) */
+        .cell-champagne {
+            background: linear-gradient(135deg, #DEBE76 0%, #C89F48 100%);
+            color: #FFFFFF;
+            border-radius: 18px 40px 18px 18px;
+            border: 1.5px solid #EAD49E;
+            box-shadow: 0 16px 36px -6px rgba(175, 137, 54, 0.35);
+        }
+
+        .cell-champagne .cell-tag { color: #FFF8E7; }
+        .cell-champagne .cell-title { color: #FFFFFF; }
+        .cell-champagne .cell-desc { color: #FFF3D6; }
+        .cell-champagne .cell-arrow { color: #FFFFFF; }
+
+        /* CELDA 3: TERRACOTA NUDE (RESULTADOS EN INSTAGRAM) */
+        .cell-terracotta {
+            background: var(--color-terracotta-rich);
+            color: #FFFFFF;
+            border-radius: 18px 18px 18px 40px;
+            border: 1.5px solid #AF6751;
+            box-shadow: 0 16px 36px -6px rgba(143, 76, 54, 0.35);
+        }
+
+        .cell-terracotta .cell-tag { color: #FCE8E2; }
+        .cell-terracotta .cell-title { color: #FFFFFF; }
+        .cell-terracotta .cell-desc { color: #F9DDD5; }
+        .cell-terracotta .cell-arrow { color: #FFFFFF; }
+
+        /* CELDA 4: BLANCO MARFIL CON RIBETE DORADO (UBICACIÓN GPS) */
+        .cell-ivory-sand {
+            background: #FFFFFF;
+            color: var(--color-espresso-dark);
+            border-radius: 18px 18px 40px 18px;
+            border: 2px solid var(--gold-hairline);
+            box-shadow: var(--shadow-float-card);
+        }
+
+        .cell-ivory-sand .cell-tag { color: var(--gold-burnished); }
+        .cell-ivory-sand .cell-title { color: var(--color-espresso-dark); }
+        .cell-ivory-sand .cell-desc { color: var(--text-muted-taupe); }
+        .cell-ivory-sand .cell-arrow { color: var(--gold-burnished); }
+
+        /* CELDA RECTANGULAR COMPLETA: LÍNEA DIRECTA AUXILIAR */
+        .cell-full-span-white {
+            grid-column: span 2;
+            min-height: auto;
+            flex-direction: row;
+            align-items: center;
+            background: #FFFFFF;
+            border: 2px solid var(--gold-hairline);
+            border-left: 6px solid var(--gold-primary);
+            border-radius: 22px;
+            padding: 18px 20px;
+            box-shadow: var(--shadow-float-card);
+            color: var(--color-espresso-dark);
+        }
+
+        .cell-full-span-white:hover {
+            border-color: var(--gold-primary);
+        }
+
+        .cell-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .cell-tag {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .cell-arrow {
+            font-family: var(--font-mono);
+            font-size: 1.15rem;
+            font-weight: 800;
+            transition: transform 0.25s ease;
+        }
+
+        .bento-cell:hover .cell-arrow {
+            transform: translate(4px, -4px);
+        }
+
+        .cell-title {
+            font-family: var(--font-editorial);
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .cell-desc {
+            font-size: 0.77rem;
+            margin-top: 4px;
+            line-height: 1.38;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           7. POD SACRO OSCURO: VERSÍCULO BÍBLICO (ISAÍAS 41:13)
+           ========================================================================== */
+        .biblical-creed-pod {
+            background: linear-gradient(135deg, #271E18 0%, #1A130F 100%);
+            border: 1.5px solid var(--gold-burnished);
+            border-radius: 28px;
+            padding: 26px 22px;
+            box-shadow: var(--shadow-espresso);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 12px;
-            padding-top: 10px;
-            border-top: 1px solid var(--border-hairline);
+            position: relative;
+            overflow: hidden;
         }
 
-        .footer-location {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.22em;
+        .biblical-creed-pod::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(213, 180, 101, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .biblical-verse-frame {
+            width: 100%;
+            max-width: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .verse-top-call {
+            font-family: var(--font-editorial);
+            font-size: 1.35rem;
+            font-style: italic;
+            color: var(--gold-primary);
+            line-height: 1.2;
+        }
+
+        .verse-bold-declaration {
+            font-family: var(--font-monument);
+            font-size: 1.18rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+            line-height: 1.3;
+        }
+
+        .verse-hand-promise {
+            font-family: var(--font-editorial);
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            font-style: italic;
+        }
+
+        .verse-main-motto {
+            font-family: var(--font-monument);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 0.02em;
+            margin-top: 4px;
+        }
+
+        .verse-citation-tag {
+            font-family: var(--font-editorial);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #E2CA88;
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .verse-citation-tag::before, .verse-citation-tag::after {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--gold-burnished);
+        }
+
+        /* ==========================================================================
+           8. SHOWCASE HORIZONTAL CON FOTOS REALES DE FACEBOOK
+           ========================================================================== */
+        .showcase-flow-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .showcase-nav-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 0 4px;
+        }
+
+        .showcase-heading {
+            font-family: var(--font-editorial);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-espresso-dark);
+        }
+
+        .showcase-cta {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 800;
             text-transform: uppercase;
-            color: #C0C0C0;
-            line-height: 1.6;
+            text-decoration: none;
+            color: var(--gold-burnished);
+            letter-spacing: 0.08em;
+            cursor: pointer;
         }
 
-        .footer-location strong {
-            color: var(--oro-texto);
+        .dishes-snap-slider {
+            display: flex;
+            gap: 13px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 4px 2px 14px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .dishes-snap-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .treatment-card-glass {
+            flex: 0 0 195px;
+            scroll-snap-align: start;
+            background: #FFFFFF;
+            border: 1.5px solid var(--gold-hairline);
+            border-radius: 20px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--color-espresso-dark);
+            box-shadow: var(--shadow-float-card);
+            transition: all 0.28s ease;
+            cursor: pointer;
+        }
+
+        .treatment-card-glass:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-hover-card);
+        }
+
+        .treatment-frame-img {
+            width: 100%;
+            height: 140px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #EFE8DB;
+            position: relative;
+        }
+
+        .treatment-frame-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .treatment-card-glass:hover .treatment-frame-img img {
+            transform: scale(1.08);
+        }
+
+        .treatment-badge-corner {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            font-family: var(--font-mono);
+            font-size: 0.58rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: var(--color-espresso-dark);
+            color: #FFFFFF;
+            border: 1px solid var(--gold-primary);
+            letter-spacing: 0.05em;
+        }
+
+        .treatment-name-label {
+            font-family: var(--font-editorial);
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-espresso-dark);
+        }
+
+        .treatment-subnotes {
+            font-size: 0.76rem;
+            color: var(--text-muted-taupe);
+            line-height: 1.35;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           9. LOCALIZACIÓN & ATENCIÓN: ICONOS VECTORIALES DE ALTA GAMA (NO INFANTILES)
+           ========================================================================== */
+        .info-enclosure-pod {
+            background: #FFFFFF;
+            border: 1.5px solid var(--gold-hairline);
+            border-radius: 24px;
+            padding: 22px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            box-shadow: var(--shadow-float-card);
+        }
+
+        .pod-head-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pod-title-text {
+            font-family: var(--font-editorial);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-espresso-dark);
+        }
+
+        .pod-items-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .clean-vector-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.85rem;
+            line-height: 1.45;
+            color: var(--text-body-warm);
+        }
+
+        .vector-icon-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: var(--color-nude-velvet);
+            border: 1px solid var(--gold-hairline);
+            color: var(--gold-burnished);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .vector-icon-badge svg {
+            width: 15px;
+            height: 15px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .btn-open-maps-action {
+            width: 100%;
+            background: linear-gradient(135deg, #FAF6EE, #F1E5CF);
+            border: 1.5px solid var(--gold-primary);
+            color: var(--color-espresso-dark);
+            padding: 13px;
+            border-radius: 14px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-open-maps-action:hover {
+            background: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(213, 180, 101, 0.25);
+        }
+
+        /* ==========================================================================
+           10. FOOTER NOBLE
+           ========================================================================== */
+        .hub-noble-footer {
+            margin-top: 10px;
+            padding-top: 22px;
+            border-top: 1.5px dashed var(--gold-hairline);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .footer-brand-monument {
+            font-family: var(--font-editorial);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--color-espresso-dark);
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 16px;
+            font-size: 0.78rem;
             font-weight: 700;
         }
 
-        .footer-copyright {
-            font-size: 0.56rem;
-            font-weight: 400;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-            color: var(--gray-subtle);
+        .footer-social-links a {
+            color: var(--gold-burnished);
+            text-decoration: none;
         }
 
-        /* AJUSTES MÓVILES */
-        @media (max-width: 480px) {
-            .bio-canvas {
-                gap: 20px;
-            }
+        .footer-address-caption {
+            font-size: 0.74rem;
+            color: var(--text-muted-taupe);
+            line-height: 1.5;
+            max-width: 380px;
+        }
 
-            .logo-box {
-                max-width: 220px;
-            }
+        .footer-legal-copy {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--text-muted-taupe);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
 
-            .btn-cerini-box {
-                padding: 16px 18px;
-                font-size: 0.82rem;
-            }
+        /* ==========================================================================
+           11. MODAL CARTA DE PROTOCOLOS FACIALES
+           ========================================================================== */
+        .modal-veil-couture {
+            position: fixed;
+            inset: 0;
+            background: rgba(31, 24, 19, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.28s ease;
+        }
 
-            .editorial-link-card {
-                padding: 16px 16px 16px 20px;
-            }
+        .modal-veil-couture.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-            .link-title {
-                font-size: 0.88rem;
-            }
+        .modal-card-couture {
+            background: #FDFBF8;
+            border: 1.5px solid var(--gold-primary);
+            border-radius: 28px;
+            width: 100%;
+            max-width: 480px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 30px 75px rgba(0, 0, 0, 0.35);
+            transform: scale(0.94);
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-veil-couture.active .modal-card-couture {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 20px 24px;
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--gold-hairline);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-header h3 {
+            font-family: var(--font-editorial);
+            font-size: 1.55rem;
+            color: var(--color-espresso-dark);
+        }
+
+        .btn-close-modal {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--gold-hairline);
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--color-espresso-dark);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-close-modal:hover {
+            background: var(--gold-primary);
+            color: #FFFFFF;
+            border-color: var(--gold-primary);
+        }
+
+        .modal-body-scroll {
+            padding: 22px 24px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .service-entry {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed var(--gold-hairline);
+        }
+
+        .service-entry:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .service-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .service-title {
+            font-family: var(--font-editorial);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-espresso-dark);
+        }
+
+        .service-pill-tag {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: rgba(213, 180, 101, 0.15);
+            color: var(--gold-burnished);
+            border: 1px solid var(--gold-hairline);
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            font-size: 0.82rem;
+            line-height: 1.45;
+            color: var(--text-body-warm);
         }
     </style>
 </head>
 <body>
 
-    <main class="bio-canvas">
-        
-        <!-- CABECERA: LOGO SVG OFICIAL ARRIBA Y CENTRADO -->
-        <header class="brand-header">
-            <div class="logo-box" aria-label="Cristel Extensions Official">
-                <!-- SVG Vectorial Oficial de Cristel Extensions -->
-                <svg class="logo-svg" viewBox="0 0 346.33 170.07" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs>
-                    <linearGradient id="gGold" x1="49.48" y1="77.94" x2="49.48" y2="184.22" gradientTransform="translate(-14.09 14.09)" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#cd872a"/>
-                      <stop offset=".23" stop-color="#fdf0a0"/>
-                      <stop offset=".41" stop-color="#bc762a"/>
-                      <stop offset=".62" stop-color="#fce280"/>
-                      <stop offset=".81" stop-color="#b46c29"/>
-                      <stop offset="1" stop-color="#e2a33f"/>
-                    </linearGradient>
-                    <linearGradient id="gGoldCrest" x1="121.39" y1="66.54" x2="284.52" y2="66.54" xlink:href="#gGold"/>
-                  </defs>
-                  
-                  <!-- Tipografía Cristel Extensions dentro del SVG -->
-                  <g>
-                    <path fill="url(#gGold)" d="M24.95,148.09c3.68,0,7.38-.2,11.04.05,4.29.29,6.75,4.16,4.96,7.74-.69,1.38-2.19,2.34-3.51,3.69,1.59,2.22,3.33,4.8,5.26,7.22.62.78,1.74,1.17,2.62,1.76.28.19.52.43.78.66-.07.12-.14.25-.21.37-1.45,0-2.9.06-4.34-.02-1.28-.07-2.27-.77-2.98-1.82-1.39-2.07-2.76-4.15-4.11-6.25-1.1-1.7-1.2-1.76-3.33-1.55,0,2.22-.03,4.45.01,6.69.03,1.13.76,1.65,1.85,1.84.32.05.6.39.89.6-.35.16-.7.47-1.06.47-2.62.04-5.24.02-7.85.02l-.23-.32c.26-.25.49-.65.8-.71,1.35-.29,1.83-1.17,1.83-2.44,0-4.95-.01-9.91-.03-14.86,0-1.2-.57-1.93-1.8-2.16-.31-.06-.57-.37-.85-.57.09-.14.19-.27.28-.41ZM31.08,154h0c0,1.17-.04,2.33.02,3.5.02.34.25.83.52.95,1.48.69,4.5-.43,5.26-1.88,1.85-3.53-.5-7.32-4.47-7.25-.95.02-1.38.32-1.34,1.31.05,1.12.01,2.25.01,3.37Z"/>
-                    <path fill="url(#gGold)" d="M326.63,163.06c0-3.94.02-7.88-.01-11.82-.01-1.28-.87-1.86-2.03-2.14-.34-.08-.63-.38-.94-.57.06-.12.12-.24.18-.36h7.59c-.45.46-.63.8-.91.9-1.75.63-2.02.97-2.02,2.91,0,5.41,0,10.82.01,16.24,0,.49,0,.98,0,1.42-1.18.55-1.75-.14-2.33-.8-4.28-4.83-8.56-9.65-12.84-14.48-.27-.31-.55-.6-.97-1.05-.04.53-.09.87-.09,1.22,0,3.41-.03,6.83,0,10.24,0,.74.16,1.48.32,2.21.25,1.15,1.26,1.29,2.18,1.57.24.07.41.38.61.58-.24.15-.48.43-.72.44-2.33.03-4.65.02-6.98.02-.08-.11-.15-.22-.23-.33.28-.26.51-.66.84-.77,1.65-.57,2.09-1.01,2.1-2.75.03-4.58.01-9.16-.03-13.74-.01-1.5-.75-2.26-2.41-2.74-.51-.15-1.27-.14-.78-1.14,1.83,0,3.7-.04,5.57.04.4.02.86.42,1.16.76,3.86,4.41,7.7,8.85,11.54,13.27.3.34.6.68.9,1.02.1-.04.19-.08.29-.12Z"/>
-                    <path fill="url(#gGold)" d="M282.98,159c-.11-5.94,5.09-11.25,11.06-11.44,6.41-.2,12,3.9,12.19,10.59.19,6.84-4.78,11.68-10.87,11.87-7.25.23-12.26-4.34-12.38-11.03ZM286.89,157.87c.11.03.22.06.33.1,0,3.41,1.14,6.44,3.17,8.39,3.26,3.12,7.94,2.71,10.22-.9,2.58-4.08,1.67-11.14-1.86-14.45-3.28-3.08-8.3-2.33-10.31,1.7-.79,1.59-1.05,3.44-1.56,5.16Z"/>
-                    <path fill="url(#gGold)" d="M231.19,148.09c1.83,0,3.66-.04,5.48.03.41.02.91.35,1.2.69,3.9,4.44,7.77,8.9,11.65,13.36.3.34.59.68.88,1.03.11-.04.21-.07.32-.11,0-1.73,0-3.45,0-5.18,0-1.92,0-3.83-.02-5.75-.02-2.04-.4-2.51-2.32-3.09-.28-.08-.48-.41-.72-.62.06-.12.11-.23.17-.35,2.27,0,4.55,0,6.82.02.17,0,.35.24.52.38-.17.19-.3.47-.51.55-1.92.72-2.15,1.03-2.15,3.07,0,5.37,0,10.74,0,16.12,0,.49,0,.98,0,1.41-1.17.53-1.75-.12-2.34-.8-4.26-4.84-8.53-9.68-12.79-14.52-.27-.31-.56-.6-1-1.06-.04.51-.08.86-.09,1.2,0,3.46-.02,6.91,0,10.37,0,2.57.16,2.78,2.51,3.71.22.08.36.35.54.53-.23.17-.45.48-.68.49-2.12.04-4.25.04-6.37.01-.23,0-.46-.22-.7-.34.18-.22.32-.54.56-.64,1.99-.82,2.31-1.25,2.31-3.42,0-4.12,0-8.25,0-12.37,0-2.25-.6-3.03-2.72-3.69-.31-.1-.55-.41-.83-.62.1-.13.19-.26.29-.39Z"/>
-                    <path fill="url(#gGold)" d="M175.64,159.37c-2-2.92-3.86-5.78-5.9-8.5-.59-.79-1.73-1.17-2.6-1.76-.28-.19-.52-.45-.78-.67.07-.1.14-.2.21-.29h8.83c.07.09.15.18.22.28-.24.23-.44.57-.73.67-.86.27-1.05.76-.61,1.5,1.2,1.97,2.42,3.94,3.71,6.03,1.37-1.96,2.69-3.76,3.9-5.63.71-1.08.47-1.5-.75-1.87-.32-.1-.59-.36-.88-.55.06-.12.12-.25.17-.37h7.62c-.36.42-.54.83-.79.88-1.81.36-2.97,1.57-4.03,2.94-1.32,1.71-2.66,3.41-3.92,5.17-.19.27-.22.89-.04,1.15,1.96,2.89,3.91,5.79,6.01,8.58.52.69,1.58.97,2.37,1.48.36.23.66.54.99.81-.07.12-.14.25-.21.37-2.82,0-5.65,0-8.47-.02-.21,0-.42-.27-.63-.42.17-.19.31-.47.52-.55,1.19-.42,1.16-1.18.59-2.06-1.25-1.91-2.53-3.8-3.95-5.92-1.49,2.21-2.91,4.23-4.23,6.31-.52.83.03,1.26.84,1.52.37.12.68.45,1.02.69-.06.12-.13.24-.19.37h-7.98c.43-.5.64-.98.95-1.05,1.68-.39,2.88-1.4,3.88-2.74,1.57-2.1,3.17-4.16,4.83-6.33Z"/>
-                    <path fill="url(#gGold)" d="M153.82,159.25c0,2.38-.05,4.54.02,6.69.05,1.58.38,1.85,1.96,1.95.83.05,1.66.08,2.5.08,2.3-.02,4.09-.9,5.17-3.04.19-.39.67-.64,1.02-.95.1.09.2.19.31.28-.35,1.56-.67,3.13-1.08,4.67-.07.28-.55.63-.85.63-5.12.04-10.24.03-15.35.03-.09-.1-.17-.21-.26-.31.27-.28.49-.71.81-.81,1.63-.54,1.97-.95,1.97-2.67,0-4.66,0-9.33,0-13.99,0-1.81-.31-2.18-2.03-2.74-.28-.09-.47-.44-.7-.67.06-.1.11-.2.17-.31.82,0,1.65.01,2.47,0,3.99-.06,7.98-.14,11.97-.15.3,0,.83.42.87.7.16,1.23.22,2.48.23,3.72,0,.28-.29.56-.45.84-.21-.2-.55-.36-.61-.59-.66-2.56-2.46-3.22-4.84-3.05-1.03.07-2.07.01-3.2.01v8c1.43,0,2.83.07,4.23-.02,1-.07,1.77-.6,2.1-1.67.1-.34.47-.59.72-.88.1.07.2.14.3.21v6.72c-.1.08-.19.15-.29.23-.25-.28-.6-.51-.72-.84-.68-1.85-.92-2.04-2.89-2.05-1.12,0-2.24,0-3.51,0Z"/>
-                    <path fill="url(#gGold)" d="M212.89,148.09c3.12,0,6.23,0,9.35,0,1.33,0,2.67.03,4-.01,1.77-.06,1.76-.09,1.88,1.71.06.87.16,1.74.16,2.61,0,.25-.27.5-.42.75-.23-.17-.6-.31-.65-.52-.59-2.63-2.43-3.23-4.8-3.07-1.03.07-2.06.01-3.16.01v7.95c1.49,0,2.93.06,4.37-.02,1.01-.06,1.63-.69,1.91-1.69.09-.32.43-.56.66-.84.1.06.21.13.31.19v6.81c-.09.07-.17.15-.26.22-.25-.27-.61-.49-.73-.81-.69-1.85-1.01-2.11-3-2.13-1.03-.01-2.07,0-3.19,0,0,2.59-.04,5.07.05,7.54.01.37.65,1,1.01,1.01,1.81.04,3.65.05,5.43-.21,1.52-.22,2.25-1.57,3-2.79.21-.34.66-.53.99-.79l.3.29c-.39,1.55-.75,3.12-1.21,4.65-.08.27-.56.61-.86.61-4.87.04-9.74.03-14.61,0-.25,0-.51-.27-.76-.41.2-.2.36-.5.61-.59,1.97-.73,2.18-.99,2.18-3.17,0-4.5-.02-8.99-.04-13.49,0-1.97-.21-2.21-2.05-2.85-.26-.09-.44-.4-.66-.62.07-.11.14-.22.2-.34Z"/>
-                    <path fill="url(#gGold)" d="M105.38,157.58c1.36,0,2.61.05,3.85-.02,1.19-.06,2.16-.51,2.46-1.86.05-.23.41-.38.63-.57.11.24.32.47.32.71.03,2.03.01,4.07-.23,6.33-.26-.28-.64-.51-.77-.84-.74-1.87-.89-2.02-2.91-2.06-1.08-.02-2.16,0-3.34,0,0,2.52-.06,5,.06,7.47.02.39.77,1.04,1.22,1.07,1.57.12,3.16.15,4.72-.02,1.71-.19,2.71-1.45,3.51-2.89.21-.38.69-.61,1.04-.9.09.1.19.2.28.3-.35,1.52-.67,3.05-1.07,4.56-.08.29-.51.7-.78.7-4.91.04-9.83.03-14.74.02-.24,0-.49-.04-.95-.37.31-.27.58-.66.94-.77,1.53-.47,1.89-.85,1.89-2.45,0-4.71,0-9.41-.03-14.12-.01-1.86-.29-2.16-2.13-2.8-.26-.09-.42-.45-.89-.98,1.13,0,1.87,0,2.6,0,3.54,0,7.08.02,10.62,0,2.57,0,2.56-.03,2.64,2.58.02.74.12,1.49.22,2.71-.57-.4-1.1-.56-1.18-.85-.69-2.39-2.35-3.14-4.66-2.98-1.07.07-2.15.01-3.32.01v8.03Z"/>
-                    <path fill="url(#gGold)" d="M21.2,149.04c0,1.6.01,3.3-.02,5,0,.18-.22.48-.37.5-.17.03-.39-.18-.57-.31-.06-.04-.08-.14-.11-.22-1.63-3.64-4.65-5.56-8.04-5.11-4.29.57-6.81,2.96-7.49,7.11-.76,4.68,1.03,9.09,4.55,11.21,3.96,2.38,8.79,1.14,11.14-2.84.21-.35.6-.61.9-.9.12.09.23.17.35.26-.24,1.37-.46,2.75-.74,4.11-.06.26-.35.57-.61.68-4.3,1.74-8.67,2.17-13.1.51C2.76,167.41.06,163.51,0,158.96c-.06-4.6,2.54-8.48,6.89-10.36,3.77-1.62,7.58-1.48,11.43-.34.9.27,1.82.5,2.88.78Z"/>
-                    <path fill="url(#gGold)" d="M72.75,148.51c.11,1.63.21,3.16.31,4.7-.8.49-.96-.09-1.16-.67-.61-1.81-1.69-3.11-3.69-3.48-1.68-.31-3.34.42-3.99,1.82-.67,1.43-.22,3.19,1.26,4.16,1.45.95,3.03,1.72,4.56,2.54,2.07,1.1,3.66,2.6,4.13,5.01.57,2.88-1.31,5.87-4.28,6.92-2.96,1.05-5.8.39-8.6-.6-.24-.08-.45-.54-.49-.85-.14-1.15-.23-2.32-.28-3.48-.02-.41.15-.82.23-1.24.29.33.71.6.86.99.89,2.2,2.37,3.66,4.76,4.13,1.61.32,3.32-.4,4.03-1.79.78-1.52.59-3.42-.76-4.41-1.43-1.05-3.06-1.82-4.61-2.7-1.96-1.11-3.71-2.39-4.19-4.81-.46-2.3.18-4.19,2-5.64,2.37-1.9,5.07-1.81,7.83-1.19.68.15,1.34.39,2.07.6Z"/>
-                    <path fill="url(#gGold)" d="M96.28,147.74c.09,1.57.21,3.33.29,5.1,0,.17-.23.45-.4.49-.18.04-.41-.13-.61-.24-.05-.03-.06-.15-.08-.23-.63-2.85-2.67-3.41-5.19-3.23-.61.04-1.23,0-1.96,0-.03.56-.07,1-.07,1.44,0,4.83,0,9.65,0,14.48,0,2.1.21,2.35,2.19,2.97.29.09.5.44.75.67-.07.1-.15.21-.22.31h-9.2c-.15-.86-.16-.95.7-1.07,1.31-.19,1.93-.94,1.93-2.17.03-5.49.01-10.98.01-16.79-1.78.18-3.42.24-5.03.53-1.24.23-1.62,1.41-2.09,2.44-.16.34-.54.58-.82.87-.07-.39-.21-.78-.19-1.16.1-1.56.24-3.11.35-4.46,6.61.64,13.06.56,19.62.04Z"/>
-                    <path fill="url(#gGold)" d="M269.05,148.26c.14,1.88.25,3.44.36,4.99-1.05.49-1.06-.41-1.24-.89-.69-1.8-1.86-3.01-3.83-3.33-1.46-.23-3.24.61-3.78,1.82-.66,1.47-.38,3.01,1.02,3.99,1.38.97,2.92,1.74,4.41,2.55,1.91,1.03,3.65,2.24,4.27,4.46.87,3.12-.72,6.2-3.75,7.51-3.02,1.31-5.94.53-8.85-.37-.22-.07-.44-.48-.48-.75-.19-1.39-.34-2.79-.46-4.2-.02-.22.22-.45.33-.68.25.14.6.21.73.42.44.75.73,1.59,1.21,2.3,1.25,1.85,3.37,2.72,5.25,2.34,1.46-.3,2.41-1.13,2.76-2.54.37-1.48.08-2.9-1.23-3.79-1.47-1-3.08-1.8-4.63-2.67-1.47-.83-2.84-1.78-3.56-3.37-1.79-3.97,1.03-8.37,5.52-8.43,1.96-.02,3.92.41,5.96.65Z"/>
-                    <path fill="url(#gGold)" d="M332.54,163.5c.97-.51,1.11.24,1.32.79.85,2.21,2.32,3.69,4.69,4.19,1.62.34,3.26-.37,4.02-1.8.81-1.52.59-3.31-.73-4.41-.88-.73-1.94-1.27-2.93-1.87-1.2-.73-2.52-1.32-3.62-2.17-2.26-1.75-2.96-4.03-2.16-6.37.81-2.37,3.31-4.2,5.89-4.28.71-.02,1.43-.07,2.12.05,1.26.21,2.49.54,3.74.82.12,1.47.25,2.87.33,4.27.01.21-.23.44-.35.66-.2-.15-.48-.25-.6-.45-.49-.81-.81-1.75-1.41-2.46-1.06-1.25-2.44-1.78-4.12-1.34-1.29.34-2.17,1.09-2.45,2.39-.29,1.37.08,2.62,1.26,3.42,1.19.81,2.52,1.44,3.75,2.2,1.13.69,2.35,1.32,3.29,2.22,1.76,1.67,2.11,3.84,1.42,6.1-.73,2.4-2.55,3.71-4.9,4.35-2.62.71-5.08-.16-7.56-.79-.19-.05-.45-.31-.47-.49-.2-1.67-.36-3.35-.53-5.01Z"/>
-                    <path fill="url(#gGold)" d="M195.44,169.12c.35-.25.67-.64,1.05-.73,1.53-.36,2.01-.76,2.03-2.33.04-5.41.02-10.82.02-16.4-1.81-.04-3.65-.4-5.23.51-.8.46-1.21,1.58-1.82,2.38-.26.34-.58.62-.87.93l-.44-.25c.23-1.9.47-3.81.68-5.55,6.52.63,12.9.58,19.51.05v5.67c-.26-.13-.78-.22-.83-.43-.73-3.3-3.17-3.54-5.87-3.35-.41.03-.81.04-1.29.07-.03.44-.07.8-.07,1.16,0,4.87,0,9.74,0,14.62,0,2.13.28,2.48,2.28,3.08.3.09.52.42.78.64-.07.1-.14.21-.21.31h-9.45c-.09-.13-.18-.26-.28-.39Z"/>
-                    <path fill="url(#gGold)" d="M135.51,164.3c-.34,1.41-.68,2.81-1,4.22-.17.74-.49,1.08-1.35,1.07-4.66-.05-9.32-.02-13.98-.06-.33,0-.65-.28-.98-.43.25-.21.48-.57.75-.62,1.41-.23,1.83-1.2,1.84-2.42.02-4.95.01-9.9-.02-14.86,0-1.18-.59-1.94-1.83-2.14-.31-.05-.58-.38-.86-.58.06-.11.12-.22.18-.34h8.94c.07.09.14.18.21.27-.28.22-.55.59-.85.63-1.39.18-1.94,1.06-1.95,2.31-.03,4.87-.03,9.74,0,14.61,0,1.19.55,1.98,1.89,1.94,1.45-.05,2.91.04,4.34-.14,1.64-.21,2.51-1.47,3.29-2.8.23-.4.69-.66,1.04-.99.12.12.23.23.35.35Z"/>
-                    <path fill="url(#gGold)" d="M48.16,148.08c2.83,0,5.65,0,8.48.02.2,0,.4.28.6.42-.18.18-.34.45-.55.52-2.01.65-2.14.8-2.14,2.87,0,4.62-.01,9.25,0,13.87,0,1.89.22,2.15,2.02,2.75.25.08.45.35.67.53-.23.17-.45.48-.68.49-2.78.03-5.57.02-8.35.02-.07-.12-.14-.24-.21-.37.32-.26.61-.7.96-.75,1.45-.19,1.85-1.18,1.86-2.38.03-4.87.03-9.75,0-14.62,0-1.48-.5-1.97-2-2.4-.31-.09-.55-.4-.82-.61.07-.12.13-.24.2-.36Z"/>
-                    <path fill="url(#gGold)" d="M281.42,169.52h-8.82c-.07-.1-.14-.21-.22-.31.28-.23.53-.61.85-.67,1.29-.28,1.79-1.12,1.79-2.33.01-4.95.02-9.91,0-14.86,0-1.22-.5-2.07-1.84-2.26-.29-.04-.54-.4-.81-.61.07-.11.13-.21.2-.32h8.82l.21.3c-.26.21-.49.53-.78.61-1.68.44-2.04.83-2.04,2.58-.01,4.7-.01,9.41,0,14.11,0,1.89.31,2.27,2.1,2.82.29.09.51.43.76.66-.07.1-.14.19-.22.29Z"/>
-                  </g>
-                  
-                  <!-- Monograma Central y Corona Real -->
-                  <path fill="url(#gGoldCrest)" d="M205.72,29.98c0,2.58,0,5.15,0,7.73,0,4.62,0,9.25-.03,13.87,0,.49-.24,1.29-.54,1.39-.82.27-1.67.22-2.24-.75-.84-1.43-1.72-2.85-2.77-4.13-6.29-7.67-14.45-12.27-24.12-14.16-10.95-2.14-21.15-.12-30.41,6.15-7.28,4.93-12.27,11.73-15.6,19.8-1.9,4.6-3.05,9.37-3.46,14.34-.71,8.74.71,17.06,4.81,24.86,4.57,8.68,11.47,14.18,21.39,15.49,4.3.56,8.55.11,12.74-.81,8.52-1.87,16.29-5.62,23.94-9.65.37-.2.65-.93.66-1.41.07-6.83.08-13.66.1-20.48,0-.37-.06-.75-.1-1.12-.31-2.64-1.46-3.9-4.06-4.51-.8-.19-1.89-.14-1.55-1.48.08-.29.44-.59.74-.72.28-.12.66-.03.99-.03,7.62,0,15.24,0,22.87,0,.45,0,.9,0,1.43,0v1.85c-.92.25-1.84.47-2.73.76-1.91.62-3.32,1.92-3.37,3.91-.15,5.35-.05,10.72-.05,16.21,1.26-.46,2.55-.96,3.86-1.39,4.62-1.52,9.32-2.55,14.21-2.89,11.81-.82,22.89,1.52,33.17,7.36,5.86,3.32,10.68,7.78,13.82,13.85.43.83.74,1.72,1.02,2.39-2.79-1.66-5.56-3.49-8.49-5-3.8-1.95-7.96-2.8-12.18-3.31-1.77-.22-3.55-.43-5.33-.47-6.85-.14-13.4,1.41-19.76,3.84-7.36,2.82-14.12,6.83-20.98,10.64-6.77,3.76-13.74,7-21.32,8.8-6.88,1.64-13.82,2.31-20.89,1.73-11.97-.97-23.06-4.48-32.81-11.6-9.25-6.75-15.59-15.71-19.09-26.63-1.63-5.1-2.48-10.35-2.24-15.7.34-7.52,2.58-14.51,6.47-20.97,8.77-14.52,22.01-22.74,38.09-26.86,5.87-1.5,11.88-2.45,17.94-2.48,8.22-.04,16.29,1.22,24.18,3.56,1.47.43,2.96.82,4.46,1.08,2.2.38,4.11-.23,5.55-2.05.38-.48.86-.87,1.29-1.31.13.09.26.18.38.28ZM250.85,101.92c-.26-.12-.51-.26-.77-.36-4.72-1.78-9.56-2.9-14.62-3.24-4.04-.28-8.04-.19-12.02.43-6.82,1.06-13.2,3.48-19.4,6.44-7.71,3.68-15.37,7.48-23.13,11.05-5.96,2.74-12.29,4.25-18.85,4.6-5.15.28-10.17-.57-15.06-2.22-.34-.12-.71-.17-1.06-.26.44.49.94.77,1.45,1.01,4.31,1.99,8.77,3.47,13.51,4.12,4.79.65,9.53.46,14.22-.53,7.67-1.62,14.7-4.91,21.55-8.59,6.66-3.57,13.32-7.13,20.48-9.65,6.5-2.29,13.16-3.79,20.05-4.02,4.56-.15,9.09.4,13.65,1.24Z"/>
-                  <g>
-                    <path fill="url(#gGold)" d="M171.15,7.05c-.3-.28-.6-.57-.9-.84-.68-.64-.9-1.3-.4-2.2.68-1.22,1.23-2.51,1.95-4,.8,1.66,1.6,3.06,2.1,4.56.16.46-.36,1.32-.79,1.78-.55.59-.57,1.03-.29,1.73,1.35,3.35,2.63,6.73,3.97,10.08.26.65.22,1.11-.27,1.67-1.62,1.83-3.18,3.73-4.86,5.71-1.8-1.98-3.52-3.84-5.17-5.75-.21-.24-.19-.84-.05-1.18,1.54-3.85,3.12-7.69,4.7-11.55Z"/>
-                    <path fill="url(#gGold)" d="M163.55,19.67c-1.14,2.08-2.3,4.21-3.51,6.41-1.86-1.01-3.55-1.89-5.18-2.86-.32-.19-.57-.8-.54-1.2.18-3.23.41-6.45.69-9.68.07-.76-.02-1.27-.81-1.54-.73-.25-.95-.8-.92-1.57.06-1.2.01-2.41.01-3.89,1.35,1.06,2.6,1.91,3.66,2.94.27.26.12,1.19-.11,1.68-.32.67-.26,1.07.21,1.64,2.17,2.62,4.27,5.3,6.48,8.06Z"/>
-                    <path fill="url(#gGold)" d="M186.65,10.82c-1.05-2.12-.99-2.31.85-3.65.71-.51,1.38-1.06,2.33-1.8,0,1.65.04,3.12-.03,4.57-.01.29-.37.7-.67.82-.89.37-1.07.99-1.01,1.87.22,3.06.37,6.13.6,9.2.06.76-.1,1.22-.84,1.57-1.68.79-3.32,1.68-5.17,2.63-.94-2.17-1.86-4.24-2.7-6.33-.1-.24.1-.7.3-.95,2.09-2.64,4.2-5.26,6.35-7.94Z"/>
-                    <path fill="url(#gGold)" d="M185.48,27.17c4.49-2.3,9.1-4.68,13.72-7.03.79-.4,1.34-.84,1.18-1.89-.05-.35.32-.97.65-1.13,1.18-.57,2.43-1,3.81-1.54-.56,1.33-1.05,2.54-1.58,3.73-.09.2-.34.44-.53.46-1.34.15-1.76,1.25-2.33,2.2-1.4,2.3-2.82,4.6-4.18,6.92-.47.8-.93,1.06-1.89.78-3-.91-6.03-1.7-8.86-2.49Z"/>
-                    <path fill="url(#gGold)" d="M157.93,27.13c-2.99.86-5.89,1.65-8.77,2.53-.77.23-1.18.15-1.61-.58-1.64-2.79-3.34-5.55-5.02-8.31-.19-.31-.43-.82-.67-.84-1.53-.09-1.73-1.25-2.08-2.35-.23-.72-.6-1.4-.97-2.26,1.35.6,2.54,1.05,3.65,1.66.37.21.82.87.74,1.21-.28,1.16.41,1.54,1.21,1.95,4.35,2.23,8.7,4.47,13.05,6.71.14.07.28.15.47.26Z"/>
-                    <path fill="url(#gGold)" d="M180.9,26.64c-2.41-.2-4.6-.38-6.97-.57,1.45-1.68,2.82-3.29,4.32-5.03.89,1.89,1.72,3.63,2.65,5.61Z"/>
-                    <path fill="url(#gGold)" d="M169.18,26.03c-2.56.25-4.88.48-7.3.72,1.05-1.84,2.03-3.56,3.1-5.43,1.37,1.54,2.7,3.04,4.2,4.72Z"/>
-                  </g>
+    <!-- FONDO FOTOGRÁFICO DE GITHUB + PATRÓN LC 3D ASIMÉTRICO EN DERIVA CONTINUA A LA DERECHA -->
+    <div class="ambient-skin-stage" aria-hidden="true"></div>
+
+    <!-- ENVOLVENTE MÓVIL PRINCIPAL -->
+    <main class="studio-hub-shell">
+
+        <!-- 1. CABECERA: LOGO ORIGINAL SUELTO CON MÁXIMA JERARQUÍA (SIN MONEDA) -->
+        <header class="hero-identity-monument">
+            
+            <div class="brand-vector-stage" onclick="playHaptic()" aria-label="Lorena Cabrera Skin Care Studio">
+                <svg class="svg-brand-raw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.59 49.19">
+                    <defs>
+                        <style>.cls-gold-logo{fill:#D5B465;stroke-width:0px;}</style>
+                    </defs>
+                    <path class="cls-gold-logo" d="M149.06,17.63c.85-1.2,1.83-1.45,2.97-1.36.61.05.83.28.51.86-.22.39-.42.79-.65,1.17-1.97,3.33-3.52,6.84-4.46,10.6-.07.3-.14.61-.14.92,0,.64.32.87.94.68.71-.21,1.31-.61,1.83-1.12,2.41-2.35,4.41-4.93,5.58-8.18,1.99-5.51,4.45-10.81,7.83-15.65.82-1.17,1.74-2.23,2.93-3.04.46-.31.95-.57,1.49-.69,2.2-.51,3.54.9,2.89,3.06-.92,3.06-2.75,5.6-4.7,8.07-2.03,2.58-4.4,4.86-6.53,7.35-.53.62-.85,1.3-.98,2.1,1.13-1.42,2.24-2.84,3.57-4.06.95-.87,1.98-1.59,3.27-1.9,2.52-.6,4.27.98,3.82,3.54-.36,2.09-1.09,4.05-2.31,5.8-.12.17-.23.34-.42.64,1.11-.27,1.9-.85,2.66-1.46,2.62-2.12,4.09-5.06,5.6-7.97.24-.47-.09-.61-.3-.86-.73-.87-.79-1.82-.19-2.65.37-.51.89-.68,1.46-.52.62.17.75.69.63,1.24-.3,1.29.27,2.11,1.34,2.72.65.38,1.29.8,1.9,1.25.78.58,1.06,1.34.59,2.26-.97,1.9-1.98,3.78-2.91,5.7-.52,1.08-1.09,2.16-1.13,3.4-.03.99.37,1.25,1.27.86.54-.23,1.03-.57,1.44-.99,1.72-1.79,3.34-3.62,4.37-5.95,1.33-3.01,3.53-5.33,6.43-6.93.86-.47,1.77-.73,2.76-.7,1.99.05,3.15,1.55,2.71,3.49-.41,1.78-1.65,2.9-3,3.95-1.66,1.3-3.66,1.87-5.61,2.54-1.24.42-1.73,1.49-1.38,2.95.33,1.39,1.31,2.1,2.63,1.89,1.33-.21,2.5-.83,3.47-1.73,3.55-3.3,6.74-6.9,8.96-11.27.29-.57.36-.96-.12-1.52-.76-.88-.41-2.34.58-2.98.31-.2.61-.3.96-.1.34.19.55.46.43.85-.61,1.84.64,2.58,1.92,3.37,2.43,1.52,2.5,1.8,1.19,4.36-1.15,2.26-2.59,4.39-3.18,6.91-.14.61-.41,1.28.24,1.69.59.38,1.12-.05,1.58-.42,2.11-1.69,3.59-3.9,4.88-6.23,1.83-3.31,4.33-5.85,7.92-7.22.92-.35,1.85-.49,2.84-.37.97.12,1.72.46,1.78,1.83.76-1.19,1.7-1.64,2.88-1.63.7,0,1,.24.62.92-.53.96-1.09,1.91-1.63,2.87-1.48,2.61-2.65,5.36-3.43,8.26-.2.74-.61,1.68.14,2.2.71.49,1.43-.22,2.02-.66,2.33-1.75,3.86-4.2,5.53-6.52.27-.38.46-1.22,1.04-.87.59.36-.07.92-.3,1.32-1.36,2.37-2.94,4.59-4.98,6.44-.67.61-1.39,1.14-2.2,1.53-1.17.57-2.42.8-3.52-.05-1.12-.87-.89-2.15-.7-3.35.06-.4.21-.78.4-1.48-1.12,1.4-2.17,2.43-3.23,3.46-.88.84-1.85,1.54-3.08,1.78-2.13.43-3.51-.66-3.54-2.83,0-.34,0-.69,0-1.2-.87,1.05-1.61,2.04-2.61,2.81-.87.68-1.83,1.1-2.92,1.17-2.17.15-3.29-1.18-2.85-3.31.53-2.61,1.8-4.89,3.17-7.12.29-.47.6-.93.88-1.4.6-1.01.09-2.26-1.03-2.63-.5-.16-.5.23-.62.48-2.06,4.41-5.15,8.06-8.58,11.43-1.43,1.4-3.17,2.3-5.18,2.58-3.47.48-5.13-.84-5.41-4.38-.82.89-1.59,1.74-2.38,2.57-.7.73-1.53,1.29-2.5,1.59-1.09.34-2.19.45-3.14-.33-.99-.82-.92-1.94-.7-3.05.45-2.22,1.5-4.2,2.67-6.11.43-.7.9-1.38,1.33-2.09.55-.92-.24-2.52-1.29-2.68-.46-.07-.44.35-.55.6-.9,1.91-2.04,3.66-3.32,5.34-1.43,1.89-3.31,3.09-5.54,3.77-.65.2-1.12.55-1.57,1.06-1.65,1.84-3.6,3.18-6.1,3.63-1.4.25-2.49-.06-2.85-.87-.31-.7.21-1.53,1.42-2.38,1.38-.96,2.95-1.28,4.57-1.43.53-.05.89-.18,1.18-.65,1.45-2.32,2.61-4.76,3.36-7.4.14-.49.27-.97-.14-1.35-.42-.39-.95-.35-1.46-.16-1.23.44-2.24,1.22-3.12,2.15-2.16,2.26-3.87,4.84-5.24,7.65-.53,1.08-.87,2.24-.87,3.47,0,.39,0,.84-.39,1-.43.18-.9.05-1.26-.27-.8-.72-1.13-1.63-1-2.69.05-.41.12-.81.09-1.29-.93,1.07-1.9,2.07-3.01,2.93-.82.64-1.67,1.23-2.69,1.48-1.84.46-3.15-.55-3.19-2.42-.02-.87.09-1.71.51-2.58-.47.07-.59.42-.78.64-1.11,1.24-2.21,2.48-3.55,3.46-.85.63-1.8,1.05-2.88.95-1.81-.18-2.81-1.52-2.76-3.59,0-.3.06-.61.1-.92-.4-.01-.5.34-.69.54-2.65,2.81-5.8,4.69-9.64,5.42-5.35,1.02-9.4-2.1-9.66-7.52-.1-2.16.31-4.27,1.01-6.29,2.46-7.11,6.75-12.73,13.51-16.26,1.98-1.03,4.13-1.32,6.33-1.13,2.96.25,4.69,2.71,4.16,5.98-.43,2.63-1.79,4.74-4.04,6.22-.6.4-1.27.69-2.03.65-.35-.02-.76-.03-.87-.4-.13-.46.28-.62.63-.8,2.58-1.34,4.01-3.57,4.46-6.35.5-3.08-1.62-4.77-4.74-3.96-2.2.57-3.99,1.87-5.6,3.38-4.45,4.18-7.62,9.12-8.81,15.19-.36,1.82-.4,3.64-.05,5.45.66,3.41,3.37,5,7.04,4.18,2.23-.5,4.18-1.57,5.89-3.05,2-1.72,3.71-3.68,5.08-5.95,1.91-3.15,4.44-5.62,8.07-6.72.83-.25,1.66-.42,2.54-.24.78.16,1.37.47,1.47,1.65M137.97,28.83c-.02,1.71.68,2.16,1.89,1.49.5-.28.99-.64,1.39-1.05.85-.85,1.69-1.72,2.45-2.66,1.93-2.39,3.64-4.92,4.35-7.98.25-1.07-.3-1.67-1.39-1.5-.66.11-1.23.43-1.75.84-1.8,1.41-3.39,3.03-4.57,5.01-1.14,1.92-2.16,3.91-2.37,5.86M210.18,28.7c.02,1.72.67,2.1,2.07,1.33.39-.21.79-.44,1.11-.74,3-2.83,5.33-6.11,6.61-10.06.19-.57.61-1.27-.08-1.81-.71-.56-1.44-.26-2.13.09-.27.14-.53.32-.78.51-1.72,1.35-3.23,2.91-4.4,4.76-1.18,1.87-2.22,3.8-2.41,5.93M160.12,17.81c.08.05.15.11.23.16.56-.6,1.13-1.2,1.69-1.79,2.88-3.04,5.49-6.27,7.17-10.15.35-.81.73-1.74-.12-2.47-.55-.47-1.42,0-2.28,1.12-1.7,2.19-2.95,4.64-4.08,7.15-.9,1.98-1.74,3.99-2.61,5.99M185.93,24.49c2.59-.39,3.64-.78,5.38-2.21,1.12-.92,2.22-1.9,2.24-3.54,0-.57.17-1.24-.51-1.55-.61-.28-1.22-.11-1.76.26-2.56,1.74-4.22,4.15-5.34,7.04M162.12,28.2c-1.56.5-2.94.87-4.16,1.64-.22.14-.57.32-.44.62.13.31.5.31.82.24,1.51-.3,2.71-1.09,3.78-2.5"/>
+                    <path class="cls-gold-logo" d="M73.04,23.18c1.78-2.12,3.53-4.16,5.87-5.58.84-.51,1.72-.84,2.72-.81,1.48.05,2.35.98,2.26,2.46-.1,1.42-.8,2.62-1.4,3.85-1.02,2.07-2.08,4.11-2.78,6.31-.21.66-.64,1.49.14,1.99.71.45,1.41-.06,1.96-.53,2.03-1.75,3.71-3.81,5.04-6.12,1.57-2.74,3.51-5.11,6.22-6.79,1.42-.88,2.93-1.54,4.67-1.37,1.2.11,1.79.59,2.11,1.76.74-1.05,1.77-1.49,3-1.55.59-.03.77.27.56.76-.26.6-.57,1.18-.9,1.74-1.95,3.41-3.52,6.99-4.45,10.82-.12.48-.29,1.01.21,1.31.45.27.94.04,1.35-.24,1.97-1.29,3.36-3.15,4.78-4.97.72-.92,1.37-1.9,2.06-2.84.19-.25.42-.55.76-.33.33.22.17.56,0,.83-1.87,3.03-3.83,5.99-6.75,8.14-.59.43-1.24.72-1.93.95-2.47.84-3.83-1.13-3.54-3.18.09-.64.25-1.27.51-1.91-.9,1.01-1.87,1.93-2.81,2.88-.68.69-1.4,1.34-2.27,1.78-1.28.65-2.62.78-3.84-.05-1.17-.79-1.2-2.08-1.07-3.36.01-.13.05-.26-.02-.47-.81,1.05-1.76,1.95-2.71,2.86-1.35,1.29-2.94,1.73-4.76,1.27-.99-.25-1.48-.91-1.58-1.92-.11-1.03.14-1.99.57-2.9,1.14-2.42,2.31-4.83,3.46-7.25.24-.49.51-.98.57-1.54.08-.84-.28-1.14-1.09-.97-.56.12-1,.44-1.43.79-4.18,3.45-7.06,7.78-8.83,12.87-.36,1.04-1.89,1.5-2.73.81-.36-.3-.28-.68-.23-1.05.19-1.33.68-2.58,1.15-3.83.06-.15.11-.31.21-.59-1.04,1.02-1.95,1.97-2.92,2.85-2.19,2-4.64,3.32-7.75,2.93-2.59-.33-3.56-1.42-3.53-4.02,0-.17,0-.34,0-.68-.95,1.31-1.82,2.49-2.98,3.41-.91.73-1.88,1.25-3.09,1.25-2.08,0-3.13-1.2-2.78-3.26.2-1.23.59-2.4,1.12-3.53.76-1.66,1.63-3.26,2.59-4.81.75-1.22.51-2.16-.68-2.96-.42-.28-.62-.36-.88.23-.91,2.1-2.13,4.01-3.58,5.77-1.28,1.56-2.81,2.73-4.8,3.22-.49.12-.81.4-1.12.81-1.4,1.9-2.92,3.7-5.36,4.32-4.07,1.03-5.79-.99-5.71-4.7.06-2.88,1.51-5.18,3.31-7.27,1.43-1.66,3.12-3.03,5.21-3.79,3.44-1.25,5.85.64,5.58,4.29-.14,1.86-.8,3.51-1.79,5.24,1.57-.61,2.56-1.69,3.51-2.8,1.51-1.76,2.78-3.67,3.81-5.76.26-.53.28-.87-.08-1.35-.73-.99-.37-2.27.68-2.65.82-.3,1.37.09,1.15.9-.26.96.14,1.61.78,2.19.74.67,1.54,1.28,2.28,1.95,1.07.96,1.19,1.38.61,2.72-.42.97-.97,1.89-1.46,2.84-.83,1.58-1.58,3.2-2.16,4.9-.11.33-.2.66-.2,1,0,.95.46,1.25,1.33.86,1.3-.59,2.19-1.67,3.07-2.73,1.22-1.45,2.26-3.03,3.04-4.78,1.23-2.78,3.31-4.8,5.87-6.36.99-.6,2.05-.97,3.22-.95,2.03.04,3.14,1.5,2.68,3.47-.36,1.53-1.33,2.62-2.5,3.57-1.82,1.49-3.94,2.39-6.18,2.96-1.51.38-1.63,1.36-1.29,3.58.2,1.3,1.18,1.81,2.58,1.53,2.03-.4,3.67-1.53,5.16-2.89,1.45-1.33,2.8-2.77,4.08-4.27,1.24-1.46,1.64-3.31,2.41-4.99.26-.56.48-1.15.81-1.67.4-.65,1-1.04,1.8-1.02,1.13.04,1.48.55,1.03,1.57-.58,1.32-1.2,2.62-1.8,3.93-.11.24-.28.49-.15.85M29.67,28.82c0,.21-.01.41,0,.62.13,2.07,1.7,2.89,3.46,1.79.56-.35,1.05-.78,1.47-1.29,1.96-2.42,3.19-5.2,3.96-8.19.19-.73.32-1.48.21-2.25-.26-1.77-1.5-2.32-2.95-1.29-1.57,1.11-2.75,2.6-3.76,4.22-1.22,1.96-2.21,4.03-2.4,6.39M88.55,29.71c.01,1.6.62,1.98,1.83,1.37.18-.09.36-.21.52-.33,3.86-2.93,6.37-6.8,7.88-11.35.18-.54.1-1.05-.31-1.43-.46-.43-.99-.38-1.54-.13-.6.28-1.14.64-1.65,1.05-2.2,1.79-3.93,3.96-5.22,6.47-.74,1.44-1.35,2.94-1.51,4.35M57.85,25.29c3.17-.27,5.5-1.8,7.23-4.31.33-.48.48-1.06.5-1.66.05-1.3-.68-1.84-1.91-1.36-.25.1-.5.24-.72.39-2.46,1.72-4.06,4.06-5.09,6.94"/>
+                    <path class="cls-gold-logo" d="M11.74,31c3.19.86,6.06,2.2,9.16,2.86,1.09.23,2.03,0,2.99-.42.33-.14.72-.46,1.03-.04.27.38-.12.69-.31.97-1.1,1.64-2.69,2.15-4.81,1.63-1.49-.36-2.79-1.15-4.17-1.77-1.41-.63-2.84-1.22-4.25-1.85-.53-.24-.92-.18-1.4.18-1.81,1.34-3.76,2.44-6.01,2.83-.92.16-1.85.22-2.77-.05-1.06-.31-1.4-.91-1.1-1.95.5-1.79,1.86-2.54,3.55-2.88,1.64-.34,3.29-.35,4.94-.2.65.06,1.05-.13,1.42-.72,1.45-2.31,2.69-4.72,3.9-7.28-1.84.2-3.6.44-5.36.12-1.39-.26-2.72-.6-3.28-2.13-.1-.28-.28-.64,0-.87.37-.3.51.15.72.34,1.96,1.65,4.28,1.66,6.66,1.57,1.42-.05,2.14-.68,2.7-1.99,1.88-4.36,3.99-8.63,6.85-12.46,1.75-2.33,3.75-4.42,6.34-5.85C29.64.41,30.8.02,32.07,0c2.04-.03,3.42,1.23,3.62,3.29.18,1.82-.26,3.5-1.12,5.07-2.18,3.96-5.39,6.94-9.13,9.4-2.11,1.39-4.38,2.45-6.74,3.32-.41.15-.68.36-.9.76-1.73,3.18-3.63,6.25-6.07,9.16M18.91,19.73c.22-.05.32-.06.4-.09,5.1-2.05,9.17-5.4,12.29-9.89,1.18-1.69,2.26-3.45,2.64-5.54.18-.98.28-1.97-.7-2.61-1-.65-1.98-.29-2.9.26-.29.18-.57.39-.83.61-1.3,1.09-2.4,2.37-3.42,3.73-3.11,4.12-5.22,8.8-7.48,13.54M8.19,31.85c-1.4-.49-2.67-.42-3.92-.24-.68.09-1.31.43-1.77.98-.26.32-.56.68-.36,1.11.2.46.68.41,1.08.38,1.85-.15,3.38-1.02,4.97-2.22"/>
+                    <path class="cls-gold-logo" d="M51.26,44.64l-1.08-.45c-.66-.27-1.28-.51-1.28-1.14,0-.59.5-.94,1.26-.94.69,0,1.23.25,1.74.69l.73-.9c-.63-.64-1.54-1.02-2.47-1.02-1.57,0-2.69.98-2.69,2.26,0,1.17.83,1.8,1.62,2.13l1.1.48c.73.31,1.25.52,1.25,1.18,0,.63-.5,1.03-1.4,1.03-.75,0-1.52-.37-2.09-.91l-.83.98c.76.75,1.81,1.17,2.89,1.17,1.8,0,2.88-1.08,2.88-2.38,0-1.16-.67-1.77-1.62-2.16"/>
+                    <polygon class="cls-gold-logo" points="62.69 41.02 61.11 41.02 58.26 44.66 58.22 44.66 58.22 41.02 56.79 41.02 56.79 49.04 58.22 49.04 58.22 46.7 59.37 45.26 61.54 49.04 63.11 49.04 60.22 44.15 62.69 41.02"/>
+                    <rect class="cls-gold-logo" x="66.57" y="41.02" width="1.42" height="8.02"/>
+                    <path class="cls-gold-logo" d="M77.13,44.5c0,.89.11,1.91.18,2.74h-.05l-.83-1.71-2.49-4.51h-1.46v8.02h1.35v-3.51c0-.89-.11-1.86-.18-2.71h.05l.83,1.7,2.49,4.52h1.46v-8.02h-1.35v3.48Z"/>
+                    <path class="cls-gold-logo" d="M91.13,47.95c-1.34,0-2.21-1.11-2.21-2.94s.94-2.9,2.24-2.9c.63,0,1.11.28,1.52.7l.76-.92c-.51-.53-1.3-1.02-2.31-1.02-2.03,0-3.67,1.56-3.67,4.18s1.6,4.13,3.62,4.13c1.04,0,1.88-.41,2.53-1.17l-.76-.89c-.45.5-1,.82-1.71.82"/>
+                    <path class="cls-gold-logo" d="M98.96,41.02l-2.61,8.02h1.45l.63-2.17h2.69l.62,2.17h1.51l-2.62-8.02h-1.67ZM98.75,45.75l.28-.98c.26-.85.49-1.76.71-2.64h.05c.24.88.47,1.8.73,2.64l.28.98h-2.05Z"/>
+                    <path class="cls-gold-logo" d="M112.27,43.4c0-1.79-1.29-2.38-2.95-2.38h-2.7v8.02h1.42v-3.13h1.22l1.73,3.13h1.6l-1.92-3.34c.96-.33,1.61-1.08,1.61-2.3M109.17,44.76h-1.13v-2.61h1.13c1.1,0,1.7.32,1.7,1.24s-.6,1.37-1.7,1.37"/>
+                    <polygon class="cls-gold-logo" points="117.75 45.47 120.64 45.47 120.64 44.27 117.75 44.27 117.75 42.21 121.16 42.21 121.16 41.02 116.33 41.02 116.33 49.04 121.28 49.04 121.28 47.84 117.75 47.84 117.75 45.47"/>
+                    <path class="cls-gold-logo" d="M133.88,44.64l-1.08-.45c-.66-.27-1.28-.51-1.28-1.14,0-.59.5-.94,1.26-.94.69,0,1.23.25,1.74.69l.73-.9c-.63-.64-1.54-1.02-2.47-1.02-1.57,0-2.69.98-2.69,2.26,0,1.17.83,1.8,1.62,2.13l1.1.48c.73.31,1.25.52,1.25,1.18,0,.63-.5,1.03-1.4,1.03-.75,0-1.52-.37-2.09-.91l-.83.98c.76.75,1.81,1.17,2.89,1.17,1.8,0,2.88-1.08,2.88-2.38,0-1.16-.67-1.77-1.62-2.16"/>
+                    <polygon class="cls-gold-logo" points="138.48 42.21 140.79 42.21 140.79 49.04 142.21 49.04 142.21 42.21 144.53 42.21 144.53 41.02 138.48 41.02 138.48 42.21"/>
+                    <path class="cls-gold-logo" d="M152.99,45.63c0,1.75-.68,2.32-1.66,2.32s-1.62-.57-1.62-2.32v-4.61h-1.42v4.5c0,2.63,1.19,3.66,3.05,3.66s3.03-1.03,3.03-3.66v-4.5h-1.37v4.61Z"/>
+                    <path class="cls-gold-logo" d="M160.94,41.02h-2.14v8.02h2.21c2.38,0,3.84-1.39,3.84-4.04s-1.45-3.98-3.91-3.98M160.85,47.88h-.62v-5.72h.62c1.61,0,2.54.85,2.54,2.83s-.93,2.89-2.54,2.89"/>
+                    <rect class="cls-gold-logo" x="168.92" y="41.02" width="1.42" height="8.02"/>
+                    <path class="cls-gold-logo" d="M177.95,40.87c-2.09,0-3.54,1.53-3.54,4.13s1.45,4.19,3.54,4.19,3.54-1.59,3.54-4.19-1.45-4.13-3.54-4.13M177.95,47.95c-1.26,0-2.07-1.15-2.07-2.95s.81-2.89,2.07-2.89,2.08,1.09,2.08,2.89-.81,2.95-2.08,2.95"/>
                 </svg>
             </div>
 
-            <div class="studio-tagline">
-                <span>HAIR STUDIO · BELGRANO</span>
-            </div>
+            <h1 class="brand-motto-headline">El reflejo de la experiencia al servicio de tu piel.</h1>
 
-            <p class="studio-quote">
-                Técnica rusa de nanocápsulas invisibles y selección de cabello 100% virgen eslavo.
+            <p class="brand-lead-caption">
+                Cosmiatría clínica, estética avanzada y <strong>rutinas de Glow Up</strong> en el corazón de Encarnación.
             </p>
+
+            <div class="badges-capsule-row">
+                <span class="pill-badge-seal">
+                    <svg class="icon-sparkle-mini" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+                    30+ Años de Trayectoria
+                </span>
+                <span class="pill-badge-seal">
+                    <svg class="icon-sparkle-mini" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+                    Experiencia Glow 2.0
+                </span>
+                <span class="pill-badge-seal">
+                    <svg class="icon-sparkle-mini" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+                    Encarnación · Paraguay
+                </span>
+            </div>
         </header>
 
-        <!-- BANDA CONTINUA MARQUEE (CERINI RUNWAY EFFECT) -->
-        <div class="marquee-banner-cerini" aria-hidden="true">
-            <div class="marquee-track">
-                <div class="marquee-inner">
-                    <span>CRISTEL EXTENSIONS</span>
-                    <span>TÉCNICA RUSA</span>
-                    <span>NANOCÁPSULAS INVISIBLES</span>
-                    <span>CABELLO 100% ESLAVO</span>
-                    <span>STUDIO BELGRANO</span>
-                    <span>CELEBRITY SECRETS</span>
+        <!-- 2. HERO CARD WHATSAPP CONVERSIÓN -->
+        <a href="https://wa.me/595985744867?text=%C2%A1Hola%20Lorena!%20%E2%9C%A8%20Deseo%20agendar%20un%20turno%20y%20evaluaci%C3%B3n%20para%20mi%20piel." target="_blank" rel="noopener noreferrer" class="card-whatsapp-portal" onclick="playHaptic()">
+            <div class="hero-left-meta">
+                <span class="hero-live-beacon"><i class="pulse-core"></i> Atención Personalizada en Estudio</span>
+                <h2 class="hero-action-title">Agendar Cita por WhatsApp</h2>
+                <span class="hero-action-caption">Evaluación clínica previa · Turnos exclusivos</span>
+            </div>
+            <div class="whatsapp-bubble-btn">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </div>
+        </a>
+
+        <!-- 3. GRILLA BENTO MORFOLÓGICA CON ALTO CONTRASTE Y DIVERSIDAD -->
+        <section class="morph-bento-grid">
+
+            <!-- 1. CELDA BRONCE OSCURO ESPRESSO: TRATAMIENTOS FACIALES -->
+            <div class="bento-cell cell-espresso" onclick="openSkinModal()" onmouseenter="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">01 · PROTOCOLOS</span>
+                    <span class="cell-arrow">↗</span>
                 </div>
-                <div class="marquee-inner">
-                    <span>CRISTEL EXTENSIONS</span>
-                    <span>TÉCNICA RUSA</span>
-                    <span>NANOCÁPSULAS INVISIBLES</span>
-                    <span>CABELLO 100% ESLAVO</span>
-                    <span>STUDIO BELGRANO</span>
-                    <span>CELEBRITY SECRETS</span>
+                <div>
+                    <h3 class="cell-title">Tratamientos</h3>
+                    <p class="cell-desc">Higiene profunda, bioestimulación celular y peelings médicos.</p>
                 </div>
             </div>
-        </div>
 
-        <!-- DIRECTORIO DE LINKS (CON BORDES DORADOS LATERALES) -->
-        <section class="links-group" aria-label="Directorio Cristel Extensions">
-            
-            <!-- BOTÓN 1: CERINI INVERTED BOX (CON ACENTO DORADO) -->
-            <a href="https://wa.me/5491171109200?text=Hola%20Cristel%2C%20quisiera%20reservar%20mi%20turno%20en%20el%20Studio%20de%20Belgrano" class="btn-cerini-box btn-gold-accent" target="_blank" rel="noopener noreferrer">
-                <span>TURNOS ONLINE</span>
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-
-            <!-- BOTÓN 2: CERINI INVERTED BOX -->
-            <a href="https://wa.me/5491171109200?text=Hola%2C%20quisiera%20agendar%20mi%20consulta%20presencial%20sin%20cargo%20para%20diagnóstico" class="btn-cerini-box" target="_blank" rel="noopener noreferrer">
-                <span>CONSULTA SIN CARGO</span>
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-
-            <!-- LINK CARD 01: TÉCNICA RUSA (BORDE LATERAL DORADO) -->
-            <a href="https://www.instagram.com/cristelextensions/" class="editorial-link-card gold-edge-left" target="_blank" rel="noopener noreferrer">
-                <div class="link-text-block">
-                    <span class="link-category">MÉTODO EXCLUSIVO</span>
-                    <h2 class="link-title">Técnica Rusa · Nanocápsulas</h2>
-                    <p class="link-desc">Fijación con queratina italiana mechón por mechón. Cero daño</p>
+            <!-- 2. CELDA ORO CHAMPÁN SEDOSO: EXPERIENCIA GLOW 2.0 -->
+            <a href="https://web.facebook.com/p/LORENA-CABRERA-100063505275731/" target="_blank" rel="noopener noreferrer" class="bento-cell cell-champagne" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">02 · EVENTOS</span>
+                    <span class="cell-arrow">↗</span>
                 </div>
-                <div class="link-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <div>
+                    <h3 class="cell-title">Glow 2.0</h3>
+                    <p class="cell-desc">Capacitaciones y jornadas junto a Punto Farma y la UNI.</p>
                 </div>
             </a>
 
-            <!-- LINK CARD 02: CABELLO ESLAVO (BORDE LATERAL DORADO) -->
-            <a href="https://www.instagram.com/cristelextensions/" class="editorial-link-card gold-edge-left" target="_blank" rel="noopener noreferrer">
-                <div class="link-text-block">
-                    <span class="link-category">MATERIA PRIMA PURA</span>
-                    <h2 class="link-title">Cabello 100% Virgen Eslavo</h2>
-                    <p class="link-desc">Pelo ruso sin mezclas ni siliconas. Suavidad y brillo inalterables</p>
+            <!-- 3. CELDA TERRACOTA NUDE: COMUNIDAD INSTAGRAM -->
+            <a href="https://instagram.com/lorenacabreraskincarestudio" target="_blank" rel="noopener noreferrer" class="bento-cell cell-terracotta" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">03 · RESULTADOS</span>
+                    <span class="cell-arrow">↗</span>
                 </div>
-                <div class="link-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                </div>
-            </a>
-
-            <!-- LINK CARD 03: CELEBRIDADES (BORDE LATERAL CERINI BLANCO) -->
-            <a href="https://www.instagram.com/cristelextensions/" class="editorial-link-card white-edge-left" target="_blank" rel="noopener noreferrer">
-                <div class="link-text-block">
-                    <span class="link-category">PORTFOLIO DE AUTOR</span>
-                    <h2 class="link-title">Celebridades & Looks</h2>
-                    <p class="link-desc">Elegida por Susana Giménez, Wanda Nara y producciones de moda</p>
-                </div>
-                <div class="link-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <div>
+                    <h3 class="cell-title">Instagram</h3>
+                    <p class="cell-desc">Antes y después, casos clínicos reales y tips de cuidado diario.</p>
                 </div>
             </a>
 
-            <!-- LINK CARD 04: SERVICE & MANTENIMIENTO (BORDE LATERAL DORADO) -->
-            <a href="https://wa.me/5491171109200?text=Hola%2C%20quisiera%20consultar%20por%20mantenimiento%20y%20service%20de%20extensiones" class="editorial-link-card gold-edge-left" target="_blank" rel="noopener noreferrer">
-                <div class="link-text-block">
-                    <span class="link-category">CUIDADO Y RETIRO</span>
-                    <h2 class="link-title">Service & Mantenimiento</h2>
-                    <p class="link-desc">Recolocación y remoción artesanal cuidando tu pelo natural</p>
+            <!-- 4. CELDA BLANCO MARFIL CON ORO: UBICACIÓN GPS -->
+            <a href="https://maps.google.com/?q=14+de+Mayo+Juan+L+Mallorquin+Encarnacion+Paraguay" target="_blank" rel="noopener noreferrer" class="bento-cell cell-ivory-sand" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">04 · GPS STUDIO</span>
+                    <span class="cell-arrow">↗</span>
                 </div>
-                <div class="link-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <div>
+                    <h3 class="cell-title">Cómo Llegar</h3>
+                    <p class="cell-desc">14 de Mayo e/ Mallorquín y Artigas · Encarnación.</p>
                 </div>
             </a>
 
-            <!-- LINK CARD 05: STUDIO BELGRANO (BORDE LATERAL BLANCO) -->
-            <a href="https://maps.google.com/?q=Virrey+Arredondo+2448,+Belgrano,+Buenos+Aires" class="editorial-link-card white-edge-left" target="_blank" rel="noopener noreferrer">
-                <div class="link-text-block">
-                    <span class="link-category">UBICACIÓN EXCLUSIVA</span>
-                    <h2 class="link-title">Studio Belgrano · Cómo Llegar</h2>
-                    <p class="link-desc">Virrey Arredondo 2448 · CABA (Atención con cita previa)</p>
+            <!-- 5. CELDA COMPLETA HORIZONTAL: LÍNEA DIRECTA AUXILIAR -->
+            <a href="https://wa.me/595984159840?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20un%20turno%20en%20el%20Studio." target="_blank" rel="noopener noreferrer" class="bento-cell cell-full-span-white" onclick="playHaptic()">
+                <div style="flex:1;">
+                    <div class="cell-top-bar" style="margin-bottom: 2px;">
+                        <span class="cell-tag" style="color: var(--gold-burnished);">LÍNEA AUXILIAR STUDIO</span>
+                    </div>
+                    <h3 class="cell-title" style="font-size: 1.35rem;">WhatsApp: (0984) 159 840</h3>
+                    <p class="cell-desc" style="color: var(--text-muted-taupe);">Línea secundaria para coordinación de agenda y consultas</p>
                 </div>
-                <div class="link-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                </div>
+                <span class="cell-arrow" style="color: var(--gold-burnished); font-size: 1.35rem;">↗</span>
             </a>
 
         </section>
 
-        <!-- BARRA SOCIAL RETICULAR (3 COLUMNAS CERINI) -->
-        <nav class="social-strip-cerini" aria-label="Canales oficiales">
-            <a href="https://www.instagram.com/cristelextensions/" class="social-strip-item" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://wa.me/5491171109200" class="social-strip-item" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a href="https://www.tiktok.com/@cristelextensions" class="social-strip-item" target="_blank" rel="noopener noreferrer">TikTok</a>
-        </nav>
-
-        <!-- PIE INSTITUCIONAL -->
-        <footer class="bio-footer">
-            <div class="footer-location">
-                <p><strong>Studio Belgrano</strong> · Virrey Arredondo 2448, CABA</p>
-                <p>Lunes a Sábado de 9:00 a 20:00 hs</p>
+        <!-- 4. POD SACRO OSCURO: VERSÍCULO BÍBLICO (ISAÍAS 41:13) -->
+        <article class="biblical-creed-pod" onclick="playHaptic()">
+            <div class="biblical-verse-frame">
+                <span class="verse-top-call">Porque yo</span>
+                <span class="verse-bold-declaration">Jehová soy tu Dios</span>
+                <span class="verse-top-call" style="font-size: 1.25rem;">quien te sostiene</span>
+                <span class="verse-hand-promise">de tu mano derecha</span>
+                <span class="verse-top-call" style="font-size: 1.15rem;">y te dice:</span>
+                <h4 class="verse-main-motto">No temas, yo te ayudo</h4>
+                <span class="verse-citation-tag">Isaías 41:13</span>
             </div>
-            <span class="footer-copyright">© 2026 CRISTEL EXTENSIONS · BUENOS AIRES</span>
+        </article>
+
+        <!-- 5. SHOWCASE HORIZONTAL CON FOTOGRAFÍAS REALES DEL ESTUDIO EN FACEBOOK -->
+        <section class="showcase-flow-box">
+            <div class="showcase-nav-row">
+                <span class="showcase-heading">Casos & Especialidades Clínicas</span>
+                <span class="showcase-cta" onclick="openSkinModal()">Ver Menú →</span>
+            </div>
+
+            <div class="dishes-snap-slider">
+
+                <!-- 1. FOTO REAL EN CABINA / TRATAMIENTO EN CAMILLA CON LÁMPARA DERMATOLÓGICA -->
+                <div class="treatment-card-glass" onclick="openSkinModal()" onmouseenter="playHaptic()">
+                    <div class="treatment-frame-img">
+                        <span class="treatment-badge-corner">EN CABINA</span>
+                        <img src="https://scontent.figu1-1.fna.fbcdn.net/v/t39.30808-6/476780005_1178060164320815_6572702029130173812_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx820x454&amp;ctp=s820x454&amp;_nc_cat=108&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=cc71e4&amp;_nc_ohc=CBcD7Y1FimUQ7kNvwGRDkJo&amp;_nc_oc=Adoiucm4B3_xq_zwdDbNvrsBLnGt_e856Il6xph0kVEcTZrtNpCWuLJLuOu-jgo9J40&amp;_nc_zt=23&amp;_nc_ht=scontent.figu1-1.fna&amp;_nc_gid=gqmSSZ896zRV0Yw6ALJBTQ&amp;_nc_ss=73289&amp;oh=00_AQP3fiky0rZzJP-Blx5z38UZjiwdABfHVTPN18cDky3qqw&amp;oe=6ADDB590" 
+                             alt="Sesión de Tratamiento en Cabina Lorena Cabrera" 
+                             loading="lazy" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80';">
+                    </div>
+                    <span class="treatment-name-label">Higiene en Cabina</span>
+                    <span class="treatment-subnotes">Extracción ultrasónica, alta frecuencia y activos puros</span>
+                </div>
+
+                <!-- 2. FOTO REAL DEL EVENTO GLOW UP & CAPACITACIONES CON LABORATORIOS -->
+                <div class="treatment-card-glass" onclick="openSkinModal()" onmouseenter="playHaptic()">
+                    <div class="treatment-frame-img">
+                        <span class="treatment-badge-corner">GLOW UP</span>
+                        <img src="https://scontent.figu1-1.fna.fbcdn.net/v/t51.82787-15/849773105_18586300399068565_987386343224301581_n.webp?stp=dst-jpg_tt6&amp;cstp=mx1440x1440&amp;ctp=s206x206&amp;_nc_cat=106&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=714c7a&amp;_nc_ohc=KlDOT-Wi5z0Q7kNvwFatIKK&amp;_nc_oc=AdoHkUQyyUDnWe5hUGL1SNHoOH2yQU7oNb89Lxp7Gf1_uGYg1yxtErD5lOTnrjsC2bY&amp;_nc_zt=23&amp;_nc_ht=scontent.figu1-1.fna&amp;_nc_gid=gqmSSZ896zRV0Yw6ALJBTQ&amp;_nc_ss=73289&amp;oh=00_AQNb3hyWTCqSJ27alhuZqG2LIumtnp8B6Dy5_UzfArvb7w&amp;oe=6ADDE343" 
+                             alt="Experiencia Glow 2.0 Lorena Cabrera" 
+                             loading="lazy" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80';">
+                    </div>
+                    <span class="treatment-name-label">Glow 2.0 Experiencia</span>
+                    <span class="treatment-subnotes">Luminosidad biocompatible y regeneración dérmica</span>
+                </div>
+
+                <!-- 3. FOTO REAL SEBAMED & CUIDADO ADAPTADO DE LA PIEL -->
+                <div class="treatment-card-glass" onclick="openSkinModal()" onmouseenter="playHaptic()">
+                    <div class="treatment-frame-img">
+                        <span class="treatment-badge-corner">EXPERTOS</span>
+                        <img src="https://scontent.figu1-1.fna.fbcdn.net/v/t51.82787-15/849129845_18586300756068565_8216807783233739855_n.webp?stp=dst-jpg_tt6&amp;cstp=mx1440x1440&amp;ctp=s206x206&amp;_nc_cat=100&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=714c7a&amp;_nc_ohc=4-lB3cqRfOEQ7kNvwGlUGcf&amp;_nc_oc=Adr9ZWHrOWmBMUZtYfo_tYrxKFl3hP1A-dvjUqEPa3CTrsJ7PWV5sWWxmTe973jagqA&amp;_nc_zt=23&amp;_nc_ht=scontent.figu1-1.fna&amp;_nc_gid=gqmSSZ896zRV0Yw6ALJBTQ&amp;_nc_ss=73289&amp;oh=00_AQNTxoxy34P9M4YhKbyvvgVDILSVpNb_2QPqb1BJptvOlw&amp;oe=6ADDC969" 
+                             alt="Cuidado Adaptado para Tu Piel" 
+                             loading="lazy" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290900672-1f55b91b973a?auto=format&fit=crop&w=600&q=80';">
+                    </div>
+                    <span class="treatment-name-label">Terapia de Barrera</span>
+                    <span class="treatment-subnotes">Restauración de pieles sensibles y reactivas</span>
+                </div>
+
+                <!-- 4. FOTO REAL RETRATOS CLÍNICOS & CERTIFICACIÓN DERMATOLÓGICA -->
+                <div class="treatment-card-glass" onclick="openSkinModal()" onmouseenter="playHaptic()">
+                    <div class="treatment-frame-img">
+                        <span class="treatment-badge-corner">MÉDICO</span>
+                        <img src="https://scontent.figu1-1.fna.fbcdn.net/v/t51.82787-15/849773100_18586300648068565_1615977486928840764_n.jpg?stp=dst-jpegr_tt6&amp;cstp=mx1440x1440&amp;ctp=s206x206&amp;_nc_cat=103&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=714c7a&amp;_nc_ohc=BW6iu6L3gesQ7kNvwHD7Y04&amp;_nc_oc=Adq1p2R1opCktzjWFIxzSL1kPk-GzA4L255OKA4vH7SDG_d_ommTEcEjRIOjWkt30mo&amp;_nc_zt=23&amp;se=-1&amp;_nc_ht=scontent.figu1-1.fna&amp;_nc_gid=gqmSSZ896zRV0Yw6ALJBTQ&amp;_nc_ss=73289&amp;oh=00_AQMF_P_-f2BuBWGUoHzDjNxB7OMGRpouaQ5WZfDO3ZK65w&amp;oe=6ADDADFC" 
+                             alt="Certificación en Dermatología y Cosmiatría" 
+                             loading="lazy" 
+                             referrerpolicy="no-referrer"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80';">
+                    </div>
+                    <span class="treatment-name-label">Peeling & Regeneración</span>
+                    <span class="treatment-subnotes">Despigmentación médica y unificación de tono</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. POD DE INFORMACIÓN & CONTACTO CON ICONOGRAFÍA VECTORIAL PROFESIONAL -->
+        <article class="info-enclosure-pod">
+            <div class="pod-head-bar">
+                <span class="pod-title-text">Sede & Atención al Paciente</span>
+                <span class="pill-badge-seal">Oficial</span>
+            </div>
+            
+            <div class="pod-items-stack">
+                <!-- Ubicación Central -->
+                <div class="clean-vector-line">
+                    <div class="vector-icon-badge">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <strong>Sede Principal:</strong> 14 de Mayo, e/ Juan L. Mallorquín y Gral. Artigas, Encarnación.
+                    </div>
+                </div>
+
+                <!-- Ubicación Secundaria -->
+                <div class="clean-vector-line">
+                    <div class="vector-icon-badge">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                    </div>
+                    <div>
+                        <strong>Sede Alternativa:</strong> Mariscal Estigarribia e/ Tomás Romero Pereira y Villarrica.
+                    </div>
+                </div>
+
+                <!-- Teléfonos Directos -->
+                <div class="clean-vector-line">
+                    <div class="vector-icon-badge">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <strong>Líneas Telefónicas:</strong> +595 985 744867 &nbsp;·&nbsp; +595 984 159840
+                    </div>
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="clean-vector-line">
+                    <div class="vector-icon-badge">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                        <strong>Email de Contacto:</strong> lorenacabrera975@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=14+de+Mayo+Juan+L+Mallorquin+Encarnacion+Paraguay" target="_blank" rel="noopener noreferrer" class="btn-open-maps-action" onclick="playHaptic()">
+                <span>Abrir en Google Maps</span>
+                <span>↗</span>
+            </a>
+        </article>
+
+        <!-- 7. FOOTER NOBLE -->
+        <footer class="hub-noble-footer">
+            <div class="footer-brand-monument">LORENA CABRERA</div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/lorenacabreraskincarestudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <span>·</span>
+                <a href="https://web.facebook.com/p/LORENA-CABRERA-100063505275731/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <span>·</span>
+                <a href="https://wa.me/595985744867" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+            <p class="footer-address-caption">
+                Encarnación · Departamento de Itapúa · República del Paraguay<br>
+                Salud dérmica, cosmecéutica y estética de vanguardia.
+            </p>
+            <p class="footer-legal-copy">© 2026 LORENA CABRERA SKIN CARE STUDIO</p>
         </footer>
 
     </main>
 
+    <!-- MODAL DE PROTOCOLOS FACIALES -->
+    <div class="modal-veil-couture" id="skinModal" onclick="closeSkinModal(event)">
+        <div class="modal-card-couture" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>// Menú de Protocolos</h3>
+                <button class="btn-close-modal" onclick="closeSkinModal(event)" aria-label="Cerrar modal">✕</button>
+            </div>
+            <div class="modal-body-scroll">
+
+                <div class="service-entry">
+                    <div class="service-head">
+                        <span class="service-title">Higiene Facial Profunda Glow Up</span>
+                        <span class="service-pill-tag">Insignia</span>
+                    </div>
+                    <p class="service-desc">Extracción ultrasónica no invasiva, descongestión dérmica, alta frecuencia antiséptica y máscara de colágeno bioactivo.</p>
+                </div>
+
+                <div class="service-entry">
+                    <div class="service-head">
+                        <span class="service-title">Protocolo Anti-Age Tensor Nanocelular</span>
+                        <span class="service-pill-tag">Avanzado</span>
+                    </div>
+                    <p class="service-desc">Estimulación tisular con péptidos tensores y activos biocompatibles para restaurar el tono, la densidad y la firmeza del contorno facial.</p>
+                </div>
+
+                <div class="service-entry">
+                    <div class="service-head">
+                        <span class="service-title">Peeling Renovador Despigmentante</span>
+                        <span class="service-pill-tag">Clínico</span>
+                    </div>
+                    <p class="service-desc">Microexfoliación química balanceada que unifica el tono, disipa manchas solares y atenúa poros dilatados sin irritación.</p>
+                </div>
+
+                <div class="service-entry">
+                    <div class="service-head">
+                        <span class="service-title">Evaluación & Diseño de Rutina Domiciliaria</span>
+                        <span class="service-pill-tag">Primer Turno</span>
+                    </div>
+                    <p class="service-desc">Diagnóstico exhaustivo del biotipo cutáneo por Lorena Cabrera para prescribir un régimen cosmetológico 100% individualizado.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTROLADOR JS LIVIANO DE MICROINTERACCIONES -->
+    <script>
+        function playHaptic() {
+            if ('vibrate' in navigator) {
+                try { navigator.vibrate(12); } catch(e) {}
+            }
+        }
+
+        // FÍSICA MAGNÉTICA SUAVE EN MOUSEOVER
+        document.querySelectorAll('.bento-cell, .card-whatsapp-portal, .treatment-card-glass').forEach(elem => {
+            elem.addEventListener('mousemove', (e) => {
+                const rect = elem.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                elem.style.transform = `translate(${x * 0.02}px, ${y * 0.02 - 3}px)`;
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.style.transform = '';
+            });
+        });
+
+        // MODAL LOGIC
+        const skinModal = document.getElementById('skinModal');
+
+        function openSkinModal() {
+            playHaptic();
+            skinModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSkinModal(e) {
+            playHaptic();
+            skinModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && skinModal.classList.contains('active')) {
+                closeSkinModal();
+            }
+        });
+    </script>
 </body>
 </html>
